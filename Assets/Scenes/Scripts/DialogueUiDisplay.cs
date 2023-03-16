@@ -39,6 +39,8 @@ public class DialogueUiDisplay : MonoBehaviour
 
     public void SetThings()
     {
+        StopAllCoroutines();
+
         UiObject.SetActive(true);
 
         SetText();
@@ -80,6 +82,7 @@ public class DialogueUiDisplay : MonoBehaviour
     }
     void EndDialogue()
     {
+        dialogueManager = null;
         StopAllCoroutines();
         UiObject.SetActive(false);
     }
