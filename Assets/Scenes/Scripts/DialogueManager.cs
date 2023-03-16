@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public string DialogueName;
+    public string dialogueToLoad;
     [SerializeField]
     private DialogueContainer dialogueData;
     [SerializeField]
@@ -15,12 +15,13 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private int length;
 
-    public DialogueUiDisplay display;
+    [SerializeField]
+    private DialogueUiDisplay display;
 
     // Start is called before the first frame update
     void Awake()
     {
-        var data = Resources.Load<DialogueContainer>("Dialogues/" + DialogueName);
+        var data = Resources.Load<DialogueContainer>("Dialogues/" + dialogueToLoad);
 
         if (data != null)
         {
@@ -28,6 +29,7 @@ public class DialogueManager : MonoBehaviour
             length = dialogueData.GetLength() - 1;
         }
 
+        display = FindObjectOfType<DialogueUiDisplay>();
     }
 
     private void Start()
@@ -41,11 +43,14 @@ public class DialogueManager : MonoBehaviour
     {
 #if UNITY_EDITOR
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        /*if (Input.GetKeyDown(KeyCode.Space))
+            StartDialogue();*/
+
+        /*if (Input.GetKeyDown(KeyCode.RightArrow))
             NextText();
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
-            PreviousText();
+            PreviousText();*/
 #endif
     }
 
