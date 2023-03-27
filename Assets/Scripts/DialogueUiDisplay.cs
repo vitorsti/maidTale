@@ -17,6 +17,7 @@ public class DialogueUiDisplay : MonoBehaviour
     private TextMeshProUGUI displayText;
     [SerializeField]
     private Button nextButton, previousButton, endDialogueButton;
+    
 
     private void Awake()
     {
@@ -39,6 +40,7 @@ public class DialogueUiDisplay : MonoBehaviour
 
     public void SetThings()
     {
+        Debug.Log("passou aqi");
         StopAllCoroutines();
 
         UiObject.SetActive(true);
