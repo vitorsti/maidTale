@@ -78,6 +78,25 @@ public class DialogueManager : MonoBehaviour
 
         SetText(index);
     }
+    public Color GetColor(int colorIndex)
+    {
+        return dialogueData.GetColor(index, colorIndex);
+    }
+
+    public Sprite GetExpression(int colorIndex)
+    {
+        return dialogueData.GetExpression(index, colorIndex);
+    }
+
+    public Sprite GetCharacterSprite1()
+    {
+        return dialogueData.GetCharacterSprite1();
+    }
+
+    public Sprite GetCharacterSprite2()
+    {
+        return dialogueData.GetCharacterSprite2();
+    }
 
     public string GetText()
     {

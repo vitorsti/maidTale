@@ -17,8 +17,10 @@ public class DialogueUiDisplay : MonoBehaviour
     private TextMeshProUGUI displayText;
     [SerializeField]
     private Button nextButton, previousButton, endDialogueButton;
-    
-
+    [SerializeField]
+    private Image characterLeft, characterRight;
+    [SerializeField]
+    private Image expressionCharacterLeft, expressionCharacterRight;
     private void Awake()
     {
         UiObject.SetActive(false);
@@ -29,10 +31,10 @@ public class DialogueUiDisplay : MonoBehaviour
 #if UNITY_EDITOR
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
-            NextTextButton();
+            NextButton();
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
-            PreviousTextButton();
+            PreviousButton();
 #endif
     }
 
@@ -44,13 +46,15 @@ public class DialogueUiDisplay : MonoBehaviour
         StopAllCoroutines();
 
         UiObject.SetActive(true);
-
+        SetCharacterImage();
+        SetExpression();
+        SetColor();
         SetText();
 
         nextButton.onClick.RemoveAllListeners();
-        nextButton.onClick.AddListener(NextTextButton);
+        nextButton.onClick.AddListener(NextButton);
         previousButton.onClick.RemoveAllListeners();
-        previousButton.onClick.AddListener(PreviousTextButton);
+        previousButton.onClick.AddListener(PreviousButton);
 
         StartCoroutine(DisplayText());
     }
@@ -67,18 +71,48 @@ public class DialogueUiDisplay : MonoBehaviour
             splited = dialogueManager.GetText().ToCharArray();
     }
 
-    void NextTextButton()
+    void SetColor()
+    {
+        if (characterLeft != null)
+            characterLeft.color = dialogueManager.GetColor(0);
+        if (characterRight != null)
+            characterRight.color = dialogueManager.GetColor(1);
+
+    }
+    void SetCharacterImage()
+    {
+        if (characterLeft != null)
+            characterLeft.sprite = dialogueManager.GetCharacterSprite1();
+        if (characterRight != null)
+            characterRight.sprite = dialogueManager.GetCharacterSprite2();
+    }
+
+    void SetExpression()
+    {
+        if (expressionCharacterLeft != null)
+            expressionCharacterLeft.sprite = dialogueManager.GetExpression(0);
+        if (expressionCharacterRight != null)
+            expressionCharacterRight.sprite = dialogueManager.GetExpression(1);
+
+    }
+    void NextButton()
     {
         dialogueManager.NextText();
         StopAllCoroutines();
+        SetCharacterImage();
+        SetExpression();
+        SetColor();
         SetText();
         StartCoroutine(DisplayText());
     }
 
-    void PreviousTextButton()
+    void PreviousButton()
     {
         dialogueManager.PreviousText();
         StopAllCoroutines();
+        SetCharacterImage();
+        SetExpression();
+        SetColor();
         SetText();
         StartCoroutine(DisplayText());
     }

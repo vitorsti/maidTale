@@ -7,6 +7,8 @@ using System.Linq;
 [CreateAssetMenu(fileName = "Conversation Container", menuName = "ScriptableObject/ConversationContainerObject")]
 public class DialogueContainer : ScriptableObject
 {
+    [SerializeField]
+    private Sprite ch1, ch2;
     [Serializable]
     private struct dialogueData { public int id; [TextArea] public string text; public Color c1,c2;public Sprite e1,e2;}
     [SerializeField]
@@ -40,6 +42,16 @@ public class DialogueContainer : ScriptableObject
             return data.FirstOrDefault(x => x.id == id).e1;
         else
             return data.FirstOrDefault(x => x.id == id).e2;
+    }
+
+    public Sprite GetCharacterSprite1()
+    {
+        return ch1;
+    }
+
+    public Sprite GetCharacterSprite2()
+    {
+        return ch2;
     }
     public int GetLength()
     {
