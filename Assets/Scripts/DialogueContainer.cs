@@ -8,15 +8,19 @@ using System.Linq;
 public class DialogueContainer : ScriptableObject
 {
     [SerializeField]
+    private string characterDialogue;
+    [SerializeField]
     private Sprite ch1, ch2;
+    [SerializeField]
+    private bool dialogueEnded;
     [Serializable]
-    private struct dialogueData { public int id; [TextArea] public string text; public Color c1,c2;public Sprite e1,e2;}
+    private struct dialogueData { public int id; [TextArea] public string text; public bool hasChoice; [TextArea] public string goodChoice, badChoice; public Color c1, c2; public Sprite e1, e2; public bool choiced; public float afinityToAdd; public float afinityToRemove; }
     [SerializeField]
     private dialogueData[] data;
 
     private void OnValidate()
     {
-        for(int i = 0; i < data.Length; i++)
+        for (int i = 0; i < data.Length; i++)
         {
             data[i].id = i;
             data[i].c1.a = 1;
@@ -30,7 +34,7 @@ public class DialogueContainer : ScriptableObject
     }
     public Color GetColor(int id, int colorIndex)
     {
-        if(colorIndex == 0)
+        if (colorIndex == 0)
             return data.FirstOrDefault(x => x.id == id).c1;
         else
             return data.FirstOrDefault(x => x.id == id).c2;
@@ -53,8 +57,51 @@ public class DialogueContainer : ScriptableObject
     {
         return ch2;
     }
+    public bool GetHasChoice(int id)
+    {
+        return data.FirstOrDefault(x => x.id == id).hasChoice;
+    }
+
+    public string GetGoodChoice(int id)
+    {
+        return data.FirstOrDefault(x => x.id == id).goodChoice;
+    }
+
+    public string GetBadChoice(int id)
+    {
+        return data.FirstOrDefault(x => x.id == id).badChoice;
+    }
     public int GetLength()
     {
         return data.Length;
+    }
+
+    public bool GetChoiced(int id)
+    {
+        return data.FirstOrDefault(x => x.id == id).choiced;
+    }
+
+    public void SetChoiced(int id, bool value)
+    {
+        int i = Array.FindIndex(data, x => x.id == id);
+        data[i].choiced = value;
+    }
+
+    public bool GetDialogueEnded()
+    {
+        return dialogueEnded;
+    }
+
+    public void SetDialogueEnd(bool value)
+    {
+        dialogueEnded = value;
+    }
+    public float GetAfinityToAdd(int id)
+    {
+        return data.FirstOrDefault(x => x.id == id).afinityToAdd;
+    }
+    public float GetAfinityToRemove(int id)
+    {
+        return data.FirstOrDefault(x => x.id == id).afinityToRemove;
     }
 }

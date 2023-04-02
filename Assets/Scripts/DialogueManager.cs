@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public string dialogueToLoad;
+    [SerializeField]
+    private string dialogueToLoad;
+    [SerializeField]
+    private string afinityToLoad;
     [SerializeField]
     private DialogueContainer dialogueData;
+    [SerializeField]
+    private AfinityContainer afinityData;
     [SerializeField]
     [TextArea]
     private string dialogueText;
@@ -83,9 +88,9 @@ public class DialogueManager : MonoBehaviour
         return dialogueData.GetColor(index, colorIndex);
     }
 
-    public Sprite GetExpression(int colorIndex)
+    public Sprite GetExpression(int expressionIndex)
     {
-        return dialogueData.GetExpression(index, colorIndex);
+        return dialogueData.GetExpression(index, expressionIndex);
     }
 
     public Sprite GetCharacterSprite1()
@@ -97,7 +102,19 @@ public class DialogueManager : MonoBehaviour
     {
         return dialogueData.GetCharacterSprite2();
     }
+    public bool GetHasChoice()
+    {
+        return dialogueData.GetHasChoice(index);
+    }
 
+    public string GetGoodChoice()
+    {
+        return dialogueData.GetGoodChoice(index);
+    }
+    public string GetBadChoice()
+    {
+        return dialogueData.GetBadChoice(index);
+    }
     public string GetText()
     {
         return dialogueText;
@@ -108,4 +125,33 @@ public class DialogueManager : MonoBehaviour
         display.dialogueManager = this;
         display.SetThings();
     }
+
+    public void AddAfinity()
+    {
+#if UNITY_EDITOR
+        Debug.Log("AfinityAdded");
+        return;
+#endif
+        if (!dialogueData.GetChoiced(index))
+        {
+            dialogueData.SetChoiced(index, true);
+            afinityData.IncreaseAfinity(dialogueData.GetAfinityToAdd(index));
+            Debug.Log("AfinityIncreased");
+        }
+        
+    }
+    public void RemoveAfinity()
+    {
+#if UNITY_EDITOR
+        Debug.Log("AfinityAdded");
+        return;
+#endif
+        if (!dialogueData.GetChoiced(index))
+        {
+            dialogueData.SetChoiced(index, true);
+            afinityData.DecreaseAfinity(dialogueData.GetAfinityToRemove(index));
+            Debug.Log("AfinityDecreased");
+        }
+    }
+
 }

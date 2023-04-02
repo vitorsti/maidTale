@@ -21,6 +21,10 @@ public class DialogueUiDisplay : MonoBehaviour
     private Image characterLeft, characterRight;
     [SerializeField]
     private Image expressionCharacterLeft, expressionCharacterRight;
+    [SerializeField]
+    private GameObject choicebuttons;
+    [SerializeField]
+    private Button goodChoiceButton, badChoiceButton;
     private void Awake()
     {
         UiObject.SetActive(false);
@@ -52,9 +56,20 @@ public class DialogueUiDisplay : MonoBehaviour
         SetText();
 
         nextButton.onClick.RemoveAllListeners();
-        nextButton.onClick.AddListener(NextButton);
         previousButton.onClick.RemoveAllListeners();
-        previousButton.onClick.AddListener(PreviousButton);
+        goodChoiceButton.onClick.RemoveAllListeners();
+        badChoiceButton.onClick.RemoveAllListeners();
+
+        nextButton.onClick.AddListener(NextButton);
+        previousButton.onClick.AddListener(PreviousButton);  
+        goodChoiceButton.onClick.AddListener(AddAfinity);
+        goodChoiceButton.onClick.AddListener(NextButton);  
+        badChoiceButton.onClick.AddListener(RemoveAfinity);
+        badChoiceButton.onClick.AddListener(NextButton);
+
+        ChoiceOption();
+
+
 
         StartCoroutine(DisplayText());
     }
@@ -93,11 +108,13 @@ public class DialogueUiDisplay : MonoBehaviour
             expressionCharacterLeft.sprite = dialogueManager.GetExpression(0);
         if (expressionCharacterRight != null)
             expressionCharacterRight.sprite = dialogueManager.GetExpression(1);
-
+        //mooooooooooooooooooooooooooooooooooooreee
+        //amogus
     }
     void NextButton()
     {
         dialogueManager.NextText();
+        ChoiceOption();
         StopAllCoroutines();
         SetCharacterImage();
         SetExpression();
@@ -107,8 +124,9 @@ public class DialogueUiDisplay : MonoBehaviour
     }
 
     void PreviousButton()
-    {
+    {       
         dialogueManager.PreviousText();
+        ChoiceOption();
         StopAllCoroutines();
         SetCharacterImage();
         SetExpression();
@@ -116,11 +134,40 @@ public class DialogueUiDisplay : MonoBehaviour
         SetText();
         StartCoroutine(DisplayText());
     }
+
+    void AddAfinity()
+    {
+        dialogueManager.AddAfinity();
+    }
+    void RemoveAfinity()
+    {
+        dialogueManager.RemoveAfinity();
+    }
+
     void EndDialogue()
     {
         dialogueManager = null;
         StopAllCoroutines();
         UiObject.SetActive(false);
+    }
+
+    void ChoiceOption()
+    {
+        if(dialogueManager.GetHasChoice())
+        {
+
+            choicebuttons.SetActive(true);
+            goodChoiceButton.GetComponentInChildren<TextMeshProUGUI>().text = dialogueManager.GetGoodChoice();
+            badChoiceButton.GetComponentInChildren<TextMeshProUGUI>().text = dialogueManager.GetBadChoice();
+            //nextButton.gameObject.SetActive(false);
+            previousButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            choicebuttons.SetActive(false);
+            nextButton.gameObject.SetActive(true);
+            previousButton.gameObject.SetActive(true);
+        }
     }
     IEnumerator DisplayText()
     {
@@ -135,3 +182,4 @@ public class DialogueUiDisplay : MonoBehaviour
         yield return null;
     }
 }
+
