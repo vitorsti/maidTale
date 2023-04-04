@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueToLoad: Dialogue1
-  afinityToLoad: 
+  afinityToLoad: Augustus
   dialogueData: {fileID: 0}
   afinityData: {fileID: 0}
   dialogueText: 

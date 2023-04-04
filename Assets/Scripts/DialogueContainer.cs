@@ -7,14 +7,16 @@ using System.Linq;
 [CreateAssetMenu(fileName = "Conversation Container", menuName = "ScriptableObject/ConversationContainerObject")]
 public class DialogueContainer : ScriptableObject
 {
-    [SerializeField]
-    private string characterDialogue;
+    //[SerializeField]
+    //private string characterDialogue;
     [SerializeField]
     private Sprite ch1, ch2;
     [SerializeField]
     private bool dialogueEnded;
+    [SerializeField]
+    private string textEnded;
     [Serializable]
-    private struct dialogueData { public int id; [TextArea] public string text; public bool hasChoice; [TextArea] public string goodChoice, badChoice; public Color c1, c2; public Sprite e1, e2; public bool choiced; public float afinityToAdd; public float afinityToRemove; }
+    private struct dialogueData { public int id; [TextArea] public string text; public bool hasChoice; [TextArea] public string goodChoice, badChoice; public float afinityToAdd; public float afinityToRemove;public Color c1, c2; public Sprite e1, e2; public bool choiced;  }
     [SerializeField]
     private dialogueData[] data;
 
@@ -103,5 +105,10 @@ public class DialogueContainer : ScriptableObject
     public float GetAfinityToRemove(int id)
     {
         return data.FirstOrDefault(x => x.id == id).afinityToRemove;
+    }
+
+    public string GetTextEnded()
+    {
+        return textEnded;
     }
 }

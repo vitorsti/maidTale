@@ -46,44 +46,69 @@ public class DialogueUiDisplay : MonoBehaviour
 
     public void SetThings()
     {
-        Debug.Log("passou aqi");
-        StopAllCoroutines();
+        if (dialogueManager.GetDialogueEnded()) {
+            StopAllCoroutines();
 
-        UiObject.SetActive(true);
-        SetCharacterImage();
-        SetExpression();
-        SetColor();
-        SetText();
+            UiObject.SetActive(true);
+            SetCharacterImage();
+            SetExpression();
+            SetColor();
+            SetText();
+        }
+        else
+        {
+            Debug.Log("passou aqi");
+            StopAllCoroutines();
 
-        nextButton.onClick.RemoveAllListeners();
-        previousButton.onClick.RemoveAllListeners();
-        goodChoiceButton.onClick.RemoveAllListeners();
-        badChoiceButton.onClick.RemoveAllListeners();
+            UiObject.SetActive(true);
+            SetCharacterImage();
+            SetExpression();
+            SetColor();
+            SetText();
 
-        nextButton.onClick.AddListener(NextButton);
-        previousButton.onClick.AddListener(PreviousButton);  
-        goodChoiceButton.onClick.AddListener(AddAfinity);
-        goodChoiceButton.onClick.AddListener(NextButton);  
-        badChoiceButton.onClick.AddListener(RemoveAfinity);
-        badChoiceButton.onClick.AddListener(NextButton);
+            nextButton.onClick.RemoveAllListeners();
+            previousButton.onClick.RemoveAllListeners();
+            goodChoiceButton.onClick.RemoveAllListeners();
+            badChoiceButton.onClick.RemoveAllListeners();
 
-        ChoiceOption();
+            nextButton.onClick.AddListener(NextButton);
+            previousButton.onClick.AddListener(PreviousButton);
+            goodChoiceButton.onClick.AddListener(AddAfinity);
+            goodChoiceButton.onClick.AddListener(NextButton);
+            badChoiceButton.onClick.AddListener(RemoveAfinity);
+            badChoiceButton.onClick.AddListener(NextButton);
+
+            ChoiceOption();
 
 
 
-        StartCoroutine(DisplayText());
+            StartCoroutine(DisplayText());
+        }
     }
 
     void SetText()
     {
         displayText.text = "";
-        if (splited.Length > 0)
-        {
-            splited = new char[0];
-            splited = dialogueManager.GetText().ToCharArray();
+        if (dialogueManager.GetDialogueEnded()) {
+            if (splited.Length > 0)
+            {
+                splited = new char[0];
+                splited = dialogueManager.GetTextEnded().ToCharArray();
+            }
+            else
+                splited = dialogueManager.GetTextEnded().ToCharArray();
         }
         else
-            splited = dialogueManager.GetText().ToCharArray();
+        {
+
+            if (splited.Length > 0)
+            {
+                splited = new char[0];
+                splited = dialogueManager.GetText().ToCharArray();
+            }
+            else
+                splited = dialogueManager.GetText().ToCharArray();
+        }
     }
 
     void SetColor()
@@ -159,7 +184,7 @@ public class DialogueUiDisplay : MonoBehaviour
             choicebuttons.SetActive(true);
             goodChoiceButton.GetComponentInChildren<TextMeshProUGUI>().text = dialogueManager.GetGoodChoice();
             badChoiceButton.GetComponentInChildren<TextMeshProUGUI>().text = dialogueManager.GetBadChoice();
-            //nextButton.gameObject.SetActive(false);
+            nextButton.gameObject.SetActive(false);
             previousButton.gameObject.SetActive(false);
         }
         else

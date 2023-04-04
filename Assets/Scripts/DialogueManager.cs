@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     [TextArea]
     private string dialogueText;
+    private string dialogueEndedText;
     [SerializeField]
     private int index;
     [SerializeField]
@@ -32,6 +33,13 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueData = data;
             length = dialogueData.GetLength() - 1;
+        }
+
+        var afinity = Resources.Load<AfinityContainer>("Afinities/" + afinityToLoad);
+
+        if (afinity != null)
+        {
+            afinityData = afinity;
         }
 
         display = FindObjectOfType<DialogueUiDisplay>();
@@ -67,9 +75,15 @@ public class DialogueManager : MonoBehaviour
     public void NextText()
     {
         index++;
-
+        if(index == length)
+        {
+            dialogueData.SetDialogueEnd(true);
+        }
         if (index > length)
+        {
             index = length;
+            
+        }
 
         SetText(index);
     }
@@ -125,11 +139,19 @@ public class DialogueManager : MonoBehaviour
         display.dialogueManager = this;
         display.SetThings();
     }
-
+    public bool GetDialogueEnded()
+    {
+        return dialogueData.GetDialogueEnded();
+    }
+    public string GetTextEnded()
+    {
+        return dialogueData.GetTextEnded();
+    }
     public void AddAfinity()
     {
 #if UNITY_EDITOR
         Debug.Log("AfinityAdded");
+        afinityData.IncreaseAfinity(dialogueData.GetAfinityToAdd(index));
         return;
 #endif
         if (!dialogueData.GetChoiced(index))
@@ -144,6 +166,7 @@ public class DialogueManager : MonoBehaviour
     {
 #if UNITY_EDITOR
         Debug.Log("AfinityAdded");
+        afinityData.DecreaseAfinity(dialogueData.GetAfinityToRemove(index));
         return;
 #endif
         if (!dialogueData.GetChoiced(index))
