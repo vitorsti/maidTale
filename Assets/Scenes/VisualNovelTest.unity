@@ -153,7 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueToLoad: Dialogue3
+  afinityToLoad: 
   dialogueData: {fileID: 0}
+  afinityData: {fileID: 0}
   dialogueText: 
   index: 0
   length: 0
@@ -338,7 +340,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueToLoad: Dialogue1
+  afinityToLoad: Augustus
   dialogueData: {fileID: 0}
+  afinityData: {fileID: 0}
   dialogueText: 
   index: 0
   length: 0
@@ -1278,7 +1282,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueToLoad: Dialogue2
+  afinityToLoad: 
   dialogueData: {fileID: 0}
+  afinityData: {fileID: 0}
   dialogueText: 
   index: 0
   length: 0

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
-
 [CreateAssetMenu(fileName = "Conversation Container", menuName = "ScriptableObject/ConversationContainerObject")]
 public class DialogueContainer : ScriptableObject
 {
@@ -16,12 +15,21 @@ public class DialogueContainer : ScriptableObject
     [SerializeField]
     private string textEnded;
     [Serializable]
-    private struct dialogueData { public int id; [TextArea] public string text; public bool hasChoice; [TextArea] public string goodChoice, badChoice; public float afinityToAdd; public float afinityToRemove;public Color c1, c2; public Sprite e1, e2; public bool choiced;  }
+    private struct dialogueData { public int id; [TextArea] public string text; public bool hasChoice; [TextArea] public string goodChoice, badChoice; public float afinityToAdd; public float afinityToRemove; public Color c1, c2; public Sprite e1, e2; public bool choiced; }
     [SerializeField]
     private dialogueData[] data;
+    [Header("----DEBUG-----")]
+    [SerializeField]
+    private bool removeH;
 
     private void OnValidate()
     {
+        if (removeH)
+        {
+            Debug.Log("health removed");
+            removeH = false;
+        }
+
         for (int i = 0; i < data.Length; i++)
         {
             data[i].id = i;

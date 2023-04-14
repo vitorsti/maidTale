@@ -77,7 +77,11 @@ public class DialogueManager : MonoBehaviour
         index++;
         if(index == length)
         {
+#if !UNITY_EDITOR
             dialogueData.SetDialogueEnd(true);
+#else
+            Debug.Log("dialogu ended");
+#endif
         }
         if (index > length)
         {

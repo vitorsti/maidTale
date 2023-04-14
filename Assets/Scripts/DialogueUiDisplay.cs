@@ -53,7 +53,14 @@ public class DialogueUiDisplay : MonoBehaviour
             SetCharacterImage();
             SetExpression();
             SetColor();
-            SetText();
+            SetText(dialogueManager.GetTextEnded());
+
+            nextButton.gameObject.SetActive(false);
+            previousButton.gameObject.SetActive(false);
+            goodChoiceButton.gameObject.SetActive(false);
+            badChoiceButton.gameObject.SetActive(false);
+
+            StartCoroutine(DisplayText());
         }
         else
         {
@@ -64,7 +71,7 @@ public class DialogueUiDisplay : MonoBehaviour
             SetCharacterImage();
             SetExpression();
             SetColor();
-            SetText();
+            SetText(dialogueManager.GetText());
 
             nextButton.onClick.RemoveAllListeners();
             previousButton.onClick.RemoveAllListeners();
@@ -78,6 +85,9 @@ public class DialogueUiDisplay : MonoBehaviour
             badChoiceButton.onClick.AddListener(RemoveAfinity);
             badChoiceButton.onClick.AddListener(NextButton);
 
+            nextButton.gameObject.SetActive(true);
+            previousButton.gameObject.SetActive(true);
+
             ChoiceOption();
 
 
@@ -86,29 +96,31 @@ public class DialogueUiDisplay : MonoBehaviour
         }
     }
 
-    void SetText()
+    void SetText(string text)
     {
         displayText.text = "";
-        if (dialogueManager.GetDialogueEnded()) {
+        //if (dialogueManager.GetDialogueEnded()) {
+       
             if (splited.Length > 0)
             {
                 splited = new char[0];
-                splited = dialogueManager.GetTextEnded().ToCharArray();
+                splited = text.ToCharArray();//dialogueManager.GetTextEnded().ToCharArray();
             }
             else
-                splited = dialogueManager.GetTextEnded().ToCharArray();
-        }
-        else
-        {
+                splited = text.ToCharArray();//dialogueManager.GetTextEnded().ToCharArray();
+                                             //}
+                                             //else
+                                             //{
+       
 
-            if (splited.Length > 0)
-            {
-                splited = new char[0];
-                splited = dialogueManager.GetText().ToCharArray();
-            }
-            else
-                splited = dialogueManager.GetText().ToCharArray();
-        }
+        //if (splited.Length > 0)
+        // {
+        // splited = new char[0];
+        // splited = dialogueManager.GetText().ToCharArray();
+        //}
+        // else
+        // splited = dialogueManager.GetText().ToCharArray();
+        //}
     }
 
     void SetColor()
@@ -144,7 +156,7 @@ public class DialogueUiDisplay : MonoBehaviour
         SetCharacterImage();
         SetExpression();
         SetColor();
-        SetText();
+        SetText(dialogueManager.GetText());
         StartCoroutine(DisplayText());
     }
 
@@ -156,7 +168,7 @@ public class DialogueUiDisplay : MonoBehaviour
         SetCharacterImage();
         SetExpression();
         SetColor();
-        SetText();
+        SetText(dialogueManager.GetText());
         StartCoroutine(DisplayText());
     }
 
