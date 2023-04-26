@@ -183,6 +183,7 @@ public class DialogueUiDisplay : MonoBehaviour
 
     void EndDialogue()
     {
+        GameManager.instace.SetState(GameManager.GameState.play);
         dialogueManager = null;
         StopAllCoroutines();
         UiObject.SetActive(false);
