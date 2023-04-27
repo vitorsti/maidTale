@@ -11,12 +11,15 @@ public class PlayerController : MonoBehaviour
     float vertical;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
+    [SerializeField]
+    private Sprite back, front, left, right;
     // Start is called before the first frame update
     void Awake()
     {
         myRb = GetComponent<Rigidbody2D>();
+        //renderer = GetComponent<SpriteRenderer>();
         //anim = GetComponent<Animator>();
-        //spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -28,27 +31,35 @@ public class PlayerController : MonoBehaviour
             horizontal = Input.GetAxis(/*"Horizontal"*/"HORIZONTAL0");
         }
 
+        
         // myRb.velocity = new Vector2(horizontal * speed * Time.fixedDeltaTime, vertical * speed * Time.fixedDeltaTime);
-        /*if (horizontal>0.1f|| horizontal <0.0f )
+        if (horizontal>0.1f)
         {
-            anim.SetBool("bWalk", true);
-            spriteRenderer.flipX = false;
-        } 
-  
-        if(horizontal == 0 )
-        {
-            anim.SetBool("bWalk", false);
+            //anim.SetBool("bWalk", true);
+            //spriteRenderer.flipX = false;
+            spriteRenderer.sprite = right;
         }
 
-        if(horizontal< 0.0f)
+        if(horizontal < 0.0f)
         {
-            anim.SetBool("bWalk", true);
-            spriteRenderer.flipX = true;
+            spriteRenderer.sprite = left;
         }
-        if (vertical > 0.1f || vertical < 0.0f)
+
+
+        if (horizontal == 0 )
         {
-            anim.SetBool("bWalk", true);
-        }*/
+           
+        }
+
+        if(vertical< 0.0f)
+        {
+            spriteRenderer.sprite = front;
+        }
+        if (vertical > 0.1f )
+        {
+            //anim.SetBool("bWalk", true);
+            spriteRenderer.sprite = back;
+        }
     }
 
     private void FixedUpdate()

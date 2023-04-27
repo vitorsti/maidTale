@@ -95,6 +95,7 @@ public class RythemMiniGameManager : MonoBehaviour
     public void GameOver()
     {
         GameManager.instace.SetState(GameManager.GameState.play);
+        TaskManager.instance.RemoveTask();
         CancelInvoke();
         NoteBehavior[] notes = FindObjectsOfType<NoteBehavior>();
         foreach (NoteBehavior i in notes)

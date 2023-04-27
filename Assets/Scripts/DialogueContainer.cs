@@ -15,7 +15,9 @@ public class DialogueContainer : ScriptableObject
     [SerializeField]
     private string textEnded;
     [Serializable]
-    private struct dialogueData { public int id; [TextArea] public string text; public bool hasChoice; [TextArea] public string goodChoice, badChoice; public float afinityToAdd; public float afinityToRemove; public Color c1, c2; public Sprite e1, e2; public bool choiced; }
+    private struct rootDialogue { [TextArea] public string text; public Color c1, c2; }
+    [Serializable]
+    private struct dialogueData { public int id; [TextArea] public string text; public bool hasChoice; public string goodChoice, badChoice; public rootDialogue[] goodChoiceRoot, badChoiceRoot; /*[TextArea] public string[] goodChoiceRoot, badChoiceRoot;*/ public float afinityToAdd; public float afinityToRemove; public Color c1, c2; public Sprite e1, e2; public bool choiced; }
     [SerializeField]
     private dialogueData[] data;
     [Header("----DEBUG-----")]
@@ -41,6 +43,30 @@ public class DialogueContainer : ScriptableObject
     public string GetText(int id)
     {
         return data.FirstOrDefault(x => x.id == id).text;
+    }
+
+    public string GetRootText(int id, int choiceRootId, bool goodOrBad)
+    {
+        Debug.Log(id);
+        Debug.Log(choiceRootId);
+        if (goodOrBad)
+        {
+            //Debug.Log(choiceRootId);
+            //Debug.Log(data.FirstOrDefault(x => x.id == _id).goodChoiceRoot.Length);
+            return data.FirstOrDefault(x => x.id == id).goodChoiceRoot[choiceRootId].text;
+            
+        }
+        else 
+        {
+            return data.FirstOrDefault(x => x.id == id).badChoiceRoot[choiceRootId].text;
+        }
+    }
+    public int GetRootlength(int id, bool goodOrBad)
+    {
+        if (goodOrBad)
+            return data.FirstOrDefault(x => x.id == id).goodChoiceRoot.Length;
+        else
+            return data.FirstOrDefault(x => x.id == id).badChoiceRoot.Length;
     }
     public Color GetColor(int id, int colorIndex)
     {

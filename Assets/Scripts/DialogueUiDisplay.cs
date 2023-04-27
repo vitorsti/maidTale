@@ -175,10 +175,12 @@ public class DialogueUiDisplay : MonoBehaviour
     void AddAfinity()
     {
         dialogueManager.AddAfinity();
+        dialogueManager.SetChoiceRoot(true);
     }
     void RemoveAfinity()
     {
         dialogueManager.RemoveAfinity();
+        dialogueManager.SetChoiceRoot(false);
     }
 
     void EndDialogue()
@@ -201,6 +203,13 @@ public class DialogueUiDisplay : MonoBehaviour
             previousButton.gameObject.SetActive(false);
         }
         else
+        {
+            choicebuttons.SetActive(false);
+            nextButton.gameObject.SetActive(true);
+            previousButton.gameObject.SetActive(true);
+        }
+
+        if (dialogueManager.IsRootDialogue())
         {
             choicebuttons.SetActive(false);
             nextButton.gameObject.SetActive(true);

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772bece35e9a9d24bb434283e25cb1ad, type: 3}
   m_Name: Dialogue1
   m_EditorClassIdentifier: 
-  ch1: {fileID: 21300000, guid: d77a3acd8e87bb34ab9f14159d52119d, type: 3}
-  ch2: {fileID: 21300000, guid: 9d806e67068704e4b95f8642e06390d8, type: 3}
+  ch1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+  ch2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
   dialogueEnded: 0
   textEnded: Nao temos mais assuntos para tratar hoje.
   data:
@@ -24,6 +24,8 @@ MonoBehaviour:
     hasChoice: 0
     goodChoice: 
     badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
     afinityToAdd: 0
     afinityToRemove: 0
     c1: {r: 1, g: 1, b: 1, a: 1}
@@ -38,6 +40,29 @@ MonoBehaviour:
     hasChoice: 1
     goodChoice: Good Choice
     badChoice: Bad Choice
+    goodChoiceRoot:
+    - text: adadad
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
+    - text: afafafa
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
+    - text: gdgsdgdgdg
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
+    badChoiceRoot:
+    - text: sgsgsgsg
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
+    - text: xvxvxvxv
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
+    - text: dgdgdgdg
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
+    - text: adadadada
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
     afinityToAdd: 0.5
     afinityToRemove: 0.2
     c1: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
@@ -52,6 +77,8 @@ MonoBehaviour:
     hasChoice: 0
     goodChoice: 
     badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
     afinityToAdd: 0
     afinityToRemove: 0
     c1: {r: 1, g: 1, b: 1, a: 1}

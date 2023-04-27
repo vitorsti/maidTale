@@ -24,6 +24,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private DialogueUiDisplay display;
 
+    //bool thisDialogueHasChoice
+    bool choiceRootDialogue = false;
+    int rootIndex;
+    public int rootLength;
+    bool _goodOrBadRoot;
     // Start is called before the first frame update
     void Awake()
     {
@@ -48,7 +53,8 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         index = 0;
-        SetText(index);
+        //NextText();
+        SetText(index, choiceRootDialogue, 0, false);
     }
 
     // Update is called once per frame
@@ -67,29 +73,72 @@ public class DialogueManager : MonoBehaviour
 #endif
     }
 
-    void SetText(int value)
+    void SetText(int value, bool choiceRootDialogue, int rootValue, bool goodOrBadChoice)
     {
-        dialogueText = dialogueData.GetText(value);
+        if (!choiceRootDialogue)
+            dialogueText = dialogueData.GetText(value);
+        else
+            dialogueText = dialogueData.GetRootText(value, rootValue, goodOrBadChoice);
     }
+
 
     public void NextText()
     {
-        index++;
-        if(index == length)
+
+        if (!choiceRootDialogue)
         {
+            index++;
+            // Debug.Log(index);
+
+
+            if (index == length)
+            {
 #if !UNITY_EDITOR
-            dialogueData.SetDialogueEnd(true);
+          //  dialogueData.SetDialogueEnd(true);
 #else
-            Debug.Log("dialogu ended");
+                Debug.Log("dialogu ended");
 #endif
+            }
+            if (index > length)
+            {
+                index = length;
+
+            }
+            SetText(index, choiceRootDialogue, 0, false);
         }
-        if (index > length)
+        else
         {
-            index = length;
-            
+            Debug.Log(index);
+            Debug.Log(rootIndex);
+            if (rootIndex == rootLength)
+            {
+                //rootIndex = rootLength;
+                choiceRootDialogue = false;
+                Debug.Log(rootLength);
+                NextText();
+                //index++;
+                //return;
+            }
+            /*if (rootIndex == rootLength)
+                choiceRootDialogue = false;*/
+
+            if (choiceRootDialogue)
+            {
+                SetText(index, choiceRootDialogue, rootIndex, _goodOrBadRoot);
+                rootIndex++;
+            }
+
         }
 
-        SetText(index);
+        /*if (!choiceRootDialogue)
+            SetText(index, false, 0, false);
+        else
+        {
+
+            Debug.Log(rootIndex);
+            SetText(rootIndex, true, rootIndex, _goodOrBadRoot);
+        }*/
+
     }
 
     public void PreviousText()
@@ -99,7 +148,7 @@ public class DialogueManager : MonoBehaviour
         if (index < 0)
             index = 0;
 
-        SetText(index);
+        SetText(index, choiceRootDialogue, 0, false);
     }
     public Color GetColor(int colorIndex)
     {
@@ -164,12 +213,12 @@ public class DialogueManager : MonoBehaviour
             afinityData.IncreaseAfinity(dialogueData.GetAfinityToAdd(index));
             Debug.Log("AfinityIncreased");
         }
-        
+
     }
     public void RemoveAfinity()
     {
 #if UNITY_EDITOR
-        Debug.Log("AfinityAdded");
+        Debug.Log("AfinityRemoved");
         afinityData.DecreaseAfinity(dialogueData.GetAfinityToRemove(index));
         return;
 #endif
@@ -181,4 +230,16 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void SetChoiceRoot(bool value)
+    {
+        choiceRootDialogue = true;
+        _goodOrBadRoot = value;
+        rootIndex = 0;
+        rootLength = dialogueData.GetRootlength(index, _goodOrBadRoot);
+    }
+
+    public bool IsRootDialogue()
+    {
+        return choiceRootDialogue;
+    }
 }
