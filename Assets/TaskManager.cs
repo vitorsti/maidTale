@@ -9,9 +9,19 @@ public class TaskManager : MonoBehaviour
     private GameObject[] tasksToComplete;
     [SerializeField]
     private int tasksQuantity;
+    [SerializeField]
+    private string afinityToLoad;
+    AfinityContainer afinityData;
+    public GameObject dayCompleted;
     private void Awake()
     {
         instance = this;
+        var afinity = Resources.Load<AfinityContainer>("Afinities/" + afinityToLoad);
+
+        if (afinity != null)
+        {
+            afinityData = afinity;
+        }
 
         //if (tasksToComplete == null)
         tasksToComplete = GameObject.FindGameObjectsWithTag("Task");
@@ -25,10 +35,13 @@ public class TaskManager : MonoBehaviour
 
     public void RemoveTask()
     {
+        afinityData.IncreaseAfinity(1f);
         tasksQuantity--;
         if (tasksQuantity <= 0)
         {
             tasksQuantity = 0;
+            dayCompleted.SetActive(true);
+            GameManager.instace.SetState(GameManager.GameState.cutscene);
         }
     }
 

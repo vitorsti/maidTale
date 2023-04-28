@@ -42,7 +42,19 @@ public class DialogueUiDisplay : MonoBehaviour
 #endif
         if (Input.GetButtonDown("VERDE0") && GameManager.instace.GetState() == GameManager.GameState.interaction)
         {
-           NextButton();
+            if (dialogueManager.GetHasChoice() && !dialogueManager.IsRootDialogue())
+            {
+                AddAfinity();
+                NextButton();
+            }
+            else if (dialogueManager.IsRootDialogue() && dialogueManager.GetHasChoice())
+                NextButton();
+            else
+                NextButton();
+
+            //if (dialogueManager.IsRootDialogue() && dialogueManager.GetHasChoice())
+            // NextButton();
+
         }
 
         if (Input.GetButtonDown("VERMELHO0") && GameManager.instace.GetState() == GameManager.GameState.interaction)
@@ -50,18 +62,40 @@ public class DialogueUiDisplay : MonoBehaviour
             PreviousButton();
         }
 
-
+        if (Input.GetButtonDown("AZUL0") && GameManager.instace.GetState() == GameManager.GameState.interaction)
+        {
+            if (dialogueManager.GetHasChoice() && !dialogueManager.IsRootDialogue() && !(dialogueManager.GetChoiced()))
+            {
+                RemoveAfinity();
+                NextButton();
+            }
+        }
+        if (Input.GetButtonDown("PRETO0") && GameManager.instace.GetState() == GameManager.GameState.interaction || GameManager.instace.GetState() == GameManager.GameState.cutscene)
+        {
+            if (endDialogueButton.isActiveAndEnabled)
+                EndDialogue();
+        }
     }
 
 
     public void SetThings()
     {
-        if (dialogueManager.GetDialogueEnded()) {
+        if (dialogueManager.isThisDialogueACutScene())
+        {
+            endDialogueButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            endDialogueButton.gameObject.SetActive(true);
+        }
+
+        if (dialogueManager.GetDialogueEnded())
+        {
             StopAllCoroutines();
 
             UiObject.SetActive(true);
             SetCharacterImage();
-            SetExpression();
+            //SetExpression();
             SetColor();
             SetText(dialogueManager.GetTextEnded());
 
@@ -79,7 +113,7 @@ public class DialogueUiDisplay : MonoBehaviour
 
             UiObject.SetActive(true);
             SetCharacterImage();
-            SetExpression();
+            //SetExpression();
             SetColor();
             SetText(dialogueManager.GetText());
 
@@ -110,18 +144,18 @@ public class DialogueUiDisplay : MonoBehaviour
     {
         displayText.text = "";
         //if (dialogueManager.GetDialogueEnded()) {
-       
-            if (splited.Length > 0)
-            {
-                splited = new char[0];
-                splited = text.ToCharArray();//dialogueManager.GetTextEnded().ToCharArray();
-            }
-            else
-                splited = text.ToCharArray();//dialogueManager.GetTextEnded().ToCharArray();
-                                             //}
-                                             //else
-                                             //{
-       
+
+        if (splited.Length > 0)
+        {
+            splited = new char[0];
+            splited = text.ToCharArray();//dialogueManager.GetTextEnded().ToCharArray();
+        }
+        else
+            splited = text.ToCharArray();//dialogueManager.GetTextEnded().ToCharArray();
+                                         //}
+                                         //else
+                                         //{
+
 
         //if (splited.Length > 0)
         // {
@@ -135,10 +169,22 @@ public class DialogueUiDisplay : MonoBehaviour
 
     void SetColor()
     {
+        //if (!dialogueManager.IsRootDialogue())
+        //{
         if (characterLeft != null)
             characterLeft.color = dialogueManager.GetColor(0);
         if (characterRight != null)
             characterRight.color = dialogueManager.GetColor(1);
+        //}
+        // else
+        //{
+        //   if (characterLeft != null)
+        //  characterLeft.color = dialogueManager.GetColor(0);
+        //  if (characterRight != null)
+        // characterRight.color = dialogueManager.GetColor(1);
+        //}
+
+
 
     }
     void SetCharacterImage()
@@ -160,23 +206,32 @@ public class DialogueUiDisplay : MonoBehaviour
     }
     void NextButton()
     {
+        /*if (dialogueManager.GetHasChoice())
+        {
+            
+        }*/
+
         dialogueManager.NextText();
         ChoiceOption();
         StopAllCoroutines();
         SetCharacterImage();
         SetExpression();
+        SetCharacterImage();
         SetColor();
         SetText(dialogueManager.GetText());
         StartCoroutine(DisplayText());
+
     }
 
     void PreviousButton()
-    {       
+    {
+
         dialogueManager.PreviousText();
         ChoiceOption();
         StopAllCoroutines();
         SetCharacterImage();
         SetExpression();
+        SetCharacterImage();
         SetColor();
         SetText(dialogueManager.GetText());
         StartCoroutine(DisplayText());
@@ -185,12 +240,12 @@ public class DialogueUiDisplay : MonoBehaviour
     void AddAfinity()
     {
         dialogueManager.AddAfinity();
-        dialogueManager.SetChoiceRoot(true);
+        dialogueManager.SetChoiceRoot(true, true);
     }
     void RemoveAfinity()
     {
         dialogueManager.RemoveAfinity();
-        dialogueManager.SetChoiceRoot(false);
+        dialogueManager.SetChoiceRoot(false, false);
     }
 
     void EndDialogue()
@@ -203,13 +258,20 @@ public class DialogueUiDisplay : MonoBehaviour
 
     void ChoiceOption()
     {
-        if(dialogueManager.GetHasChoice())
+        if (dialogueManager.GetHasChoice())
         {
 
             choicebuttons.SetActive(true);
             goodChoiceButton.GetComponentInChildren<TextMeshProUGUI>().text = dialogueManager.GetGoodChoice();
             badChoiceButton.GetComponentInChildren<TextMeshProUGUI>().text = dialogueManager.GetBadChoice();
             nextButton.gameObject.SetActive(false);
+            if (dialogueManager.GetChoiced())
+            {
+                dialogueManager.SetEnterChoiceRoot();
+                goodChoiceButton.interactable = false;
+                badChoiceButton.interactable = false;
+                nextButton.gameObject.SetActive(true);
+            }
             //previousButton.gameObject.SetActive(false);
         }
         else
@@ -225,6 +287,20 @@ public class DialogueUiDisplay : MonoBehaviour
             nextButton.gameObject.SetActive(true);
             previousButton.gameObject.SetActive(true);
         }
+        /*if (dialogueManager.isThisDialogueACutScene())
+        {
+            if (dialogueManager.GetIndex() == dialogueManager.GetLength())
+            {
+                endDialogueButton.gameObject.SetActive(true);
+                choicebuttons.SetActive(false);
+                nextButton.gameObject.SetActive(false);
+                previousButton.gameObject.SetActive(false);
+            }
+            else
+            {
+
+            }
+        }*/
     }
     IEnumerator DisplayText()
     {

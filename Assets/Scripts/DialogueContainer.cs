@@ -11,19 +11,21 @@ public class DialogueContainer : ScriptableObject
     [SerializeField]
     private Sprite ch1, ch2;
     [SerializeField]
+    private bool isThisDialogueaCutScene;
+    [SerializeField]
     private bool dialogueEnded;
     [SerializeField]
     private string textEnded;
     [Serializable]
     private struct rootDialogue { [TextArea] public string text; public Color c1, c2; }
     [Serializable]
-    private struct dialogueData { public int id; [TextArea] public string text; public bool hasChoice; public string goodChoice, badChoice; public rootDialogue[] goodChoiceRoot, badChoiceRoot; /*[TextArea] public string[] goodChoiceRoot, badChoiceRoot;*/ public float afinityToAdd; public float afinityToRemove; public Color c1, c2; public Sprite e1, e2; public bool choiced; }
+    private struct dialogueData { public int id; [TextArea] public string text; public bool hasChoice; public string goodChoice, badChoice; public rootDialogue[] goodChoiceRoot, badChoiceRoot; /*[TextArea] public string[] goodChoiceRoot, badChoiceRoot;*/ public float afinityToAdd; public float afinityToRemove; public Color c1, c2; public Sprite e1, e2; public bool choiced; public bool badChoiceChoosed, goodChoiceChoosed; }
     [SerializeField]
     private dialogueData[] data;
     [Header("----DEBUG-----")]
     [SerializeField]
     private bool removeH;
-
+    
     private void OnValidate()
     {
         if (removeH)
@@ -35,8 +37,8 @@ public class DialogueContainer : ScriptableObject
         for (int i = 0; i < data.Length; i++)
         {
             data[i].id = i;
-            data[i].c1.a = 1;
-            data[i].c2.a = 1;
+            //data[i].c1.a = 1;
+            //data[i].c2.a = 1;
         }
     }
 
@@ -68,6 +70,11 @@ public class DialogueContainer : ScriptableObject
         else
             return data.FirstOrDefault(x => x.id == id).badChoiceRoot.Length;
     }
+
+    /*public void SetChoiceChoosed()
+    {
+
+    }*/
     public Color GetColor(int id, int colorIndex)
     {
         if (colorIndex == 0)
@@ -75,7 +82,23 @@ public class DialogueContainer : ScriptableObject
         else
             return data.FirstOrDefault(x => x.id == id).c2;
     }
-
+    public Color GetRootColor(int id, int choiceRootId, bool gOrB, int colorIndex)
+    {
+        if (gOrB)
+        {
+            if(colorIndex ==0)
+            return data.FirstOrDefault(x => x.id == id).goodChoiceRoot[choiceRootId].c1;
+            else
+            return data.FirstOrDefault(x => x.id == id).goodChoiceRoot[choiceRootId].c2;
+        }
+        else
+        {
+            if (colorIndex == 0)
+                return data.FirstOrDefault(x => x.id == id).badChoiceRoot[choiceRootId].c1;
+            else
+                return data.FirstOrDefault(x => x.id == id).badChoiceRoot[choiceRootId].c2;
+        }
+    }
     public Sprite GetExpression(int id, int expressionIndex)
     {
         if (expressionIndex == 0)
@@ -123,6 +146,25 @@ public class DialogueContainer : ScriptableObject
         data[i].choiced = value;
     }
 
+    public bool GetChoiceChoosed(int id, bool bOrG)
+    {
+        if(bOrG)
+        return data.FirstOrDefault(x => x.id == id).goodChoiceChoosed;
+        else
+        return data.FirstOrDefault(x => x.id == id).badChoiceChoosed;
+    }
+
+    public void SetGoodChoiced(int id, bool value)
+    {
+        int i = Array.FindIndex(data, x => x.id == id);
+        data[i].goodChoiceChoosed = value;
+    }
+
+    public void SetBadChoiced(int id, bool value)
+    {
+        int i = Array.FindIndex(data, x => x.id == id);
+        data[i].badChoiceChoosed = value;
+    }
     public bool GetDialogueEnded()
     {
         return dialogueEnded;
@@ -145,4 +187,10 @@ public class DialogueContainer : ScriptableObject
     {
         return textEnded;
     }
+
+    public bool GetIsThisDaiologueACusscene()
+    {
+        return isThisDialogueaCutScene;
+    }
+
 }

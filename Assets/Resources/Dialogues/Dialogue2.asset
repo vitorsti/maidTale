@@ -12,14 +12,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772bece35e9a9d24bb434283e25cb1ad, type: 3}
   m_Name: Dialogue2
   m_EditorClassIdentifier: 
+  ch1: {fileID: 0}
+  ch2: {fileID: 0}
+  isThisDialogueaCutScene: 0
+  dialogueEnded: 0
+  textEnded: 
   data:
   - id: 0
-    text: "Por outro lado, a ado\xE7\xE3o de pol\xEDticas descentralizadoras estimula
-      a padroniza\xE7\xE3o das diretrizes de desenvolvimento para o futuro."
+    text: 'Vallentina: Bom dia amiga! Que bom que conseguiu o emprego!'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 9165eadc91b5a9640ba71612179bfdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
   - id: 1
-    text: "Do mesmo modo, a valoriza\xE7\xE3o de fatores subjetivos agrega valor
-      ao estabelecimento das dire\xE7\xF5es preferenciais no sentido do progresso."
+    text: 'Vallentina: Bom dia amiga! Que bom que conseguiu o emprego!'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 9165eadc91b5a9640ba71612179bfdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
   - id: 2
-    text: "Todas estas quest\xF5es, devidamente ponderadas, levantam d\xFAvidas sobre
-      se a competitividade nas transa\xE7\xF5es comerciais n\xE3o pode mais se dissociar
-      dos conhecimentos estrat\xE9gicos para atingir a excel\xEAncia."
+    text: "Maria: Eu que agrade\xE7o!"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 9165eadc91b5a9640ba71612179bfdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 3
+    text: 'Valentina: Bom, chega de papo e vamos ao trabalho, para realizar as tarefas
+      aproxime perto de uma mancha vermelha e aperte tecla E ou BOTAO VERDE  para
+      iniciar'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 9165eadc91b5a9640ba71612179bfdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 4
+    text: "Valentina: Um minigame ir\xE1 come\xE7ar, espere a esfera da direita se
+      alinhar com a esfera da esquerda, quando estiverem alinhadas, aperte E ou BOTAO
+      ESQUERDO."
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 9165eadc91b5a9640ba71612179bfdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  removeH: 0

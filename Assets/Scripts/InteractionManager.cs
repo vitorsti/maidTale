@@ -9,12 +9,14 @@ public class InteractionManager : MonoBehaviour
     [SerializeField]
     LayerMask mask;
     bool inRange;
+    public GameObject imageinteraction;
     public UnityEvent action;
 
     // Start is called before the first frame update
     void Start()
     {
         inRange = false;
+        imageinteraction.SetActive(inRange);
         //dialogueManager = GetComponent<DialogueManager>();
     }
     private void Update()
@@ -35,6 +37,7 @@ public class InteractionManager : MonoBehaviour
     {
 
         inRange = true;
+        imageinteraction.SetActive(inRange);
         Debug.Log("enter");
 
     }
@@ -43,6 +46,7 @@ public class InteractionManager : MonoBehaviour
     {
 
         inRange = false;
+        imageinteraction.SetActive(inRange);
         Debug.Log("exit");
 
 

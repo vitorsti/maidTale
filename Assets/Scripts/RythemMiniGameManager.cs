@@ -54,6 +54,11 @@ public class RythemMiniGameManager : MonoBehaviour
                 RemoveScore();
                 NoteDetector.instance.DestroyNote();
             }
+
+            if (Input.GetButton("VERMELHO0"))
+            {
+                CloseGame();
+            }
         }
     }
 
@@ -64,10 +69,12 @@ public class RythemMiniGameManager : MonoBehaviour
     public void RemoveScore()
     {
         score -= 1;
+        uiText.text = score.ToString();
         Debug.Log(score);
         if (score <= 0)
         {
             score = 0;
+            uiText.text = score.ToString();
             StartCoroutine(MiniGameEnd());
         }
     }

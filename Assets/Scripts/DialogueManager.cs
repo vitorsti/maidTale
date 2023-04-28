@@ -48,15 +48,24 @@ public class DialogueManager : MonoBehaviour
         }
 
         display = FindObjectOfType<DialogueUiDisplay>();
+        index = 0;
     }
 
     private void Start()
     {
-        index = 0;
+        //index = 0;
         //NextText();
         SetText(index, choiceRootDialogue, 0, false);
     }
-
+    public int GetIndex()
+    {
+        return index;
+    }
+    public int GetLength()
+    {
+        return length;
+    }
+    public 
     // Update is called once per frame
     void Update()
     {
@@ -102,9 +111,14 @@ public class DialogueManager : MonoBehaviour
             if (index > length)
             {
                 index = length;
+                if (isThisDialogueACutScene())
+                {
+                    EndCutScene();
+                }
 
             }
             SetText(index, choiceRootDialogue, 0, false);
+            //index++;
         }
         else
         {
@@ -112,7 +126,7 @@ public class DialogueManager : MonoBehaviour
             Debug.Log(rootIndex);
             if (rootIndex == rootLength)
             {
-                //rootIndex = rootLength;
+                rootIndex = rootLength;
                 choiceRootDialogue = false;
                 Debug.Log(rootLength);
                 NextText();
@@ -124,7 +138,12 @@ public class DialogueManager : MonoBehaviour
 
             if (choiceRootDialogue)
             {
-                SetText(index, choiceRootDialogue, rootIndex, _goodOrBadRoot);
+                if (dialogueData.GetChoiceChoosed(index, true))
+                    SetText(index, choiceRootDialogue, rootIndex, true);
+                else if (dialogueData.GetChoiceChoosed(index, false))
+                    SetText(index, choiceRootDialogue, rootIndex, false);
+                else
+                    SetText(index, choiceRootDialogue, rootIndex, _goodOrBadRoot);
                 rootIndex++;
             }
 
@@ -143,16 +162,84 @@ public class DialogueManager : MonoBehaviour
 
     public void PreviousText()
     {
-        index--;
+        //index--;
 
-        if (index < 0)
-            index = 0;
+        //if (index < 0)
+        //    index = 0;
 
-        SetText(index, choiceRootDialogue, 0, false);
+        //SetText(index, choiceRootDialogue, 0, false);
+
+        if (!choiceRootDialogue)
+        {
+            //index--;
+            // Debug.Log(index);
+
+            /*if (index == length)
+            {
+#if !UNITY_EDITOR
+          //  dialogueData.SetDialogueEnd(true);
+#else
+                Debug.Log("dialogu ended");
+#endif
+            }*/
+            index--;
+            //SetText(index, choiceRootDialogue, 0, false);
+            if (index < 0)
+            {
+                index = 0;
+                /*if (isThisDialogueACutScene())
+                {
+                    //EndCutScene();
+                }*/
+                //SetText(index, choiceRootDialogue, 0, false);
+            }
+
+            SetText(index, choiceRootDialogue, 0, false);
+        }
+        else
+        {
+            rootIndex--;
+            Debug.Log(index);
+            Debug.Log(rootIndex);
+            if (rootIndex <= 0)
+            {
+                rootIndex = 0;
+                //rootIndex = rootLength;
+                choiceRootDialogue = false;
+                //Debug.Log(rootLength);
+                PreviousText();
+                //SetText(index, choiceRootDialogue, 0, false);
+                //index++;
+                //return;
+            }
+            /*if (rootIndex == rootLength)
+                choiceRootDialogue = false;*/
+
+            if (choiceRootDialogue)
+            {
+                SetText(index, choiceRootDialogue, rootIndex, _goodOrBadRoot);
+                //rootIndex--;
+            }
+
+        }
+
+        /*if (!choiceRootDialogue)
+            SetText(index, false, 0, false);
+        else
+        {
+
+            Debug.Log(rootIndex);
+            SetText(rootIndex, true, rootIndex, _goodOrBadRoot);
+        }*/
     }
     public Color GetColor(int colorIndex)
     {
         return dialogueData.GetColor(index, colorIndex);
+    }
+
+    public Color GetRootColor( int colorIndex)
+    {
+        return dialogueData.GetRootColor(index, rootIndex, _goodOrBadRoot, colorIndex);
     }
 
     public Sprite GetExpression(int expressionIndex)
@@ -162,16 +249,23 @@ public class DialogueManager : MonoBehaviour
 
     public Sprite GetCharacterSprite1()
     {
-        return dialogueData.GetCharacterSprite1();
+        //return dialogueData.GetCharacterSprite1();
+        return dialogueData.GetExpression(index, 0);
     }
 
     public Sprite GetCharacterSprite2()
     {
-        return dialogueData.GetCharacterSprite2();
+        //return dialogueData.GetCharacterSprite2();
+        return dialogueData.GetExpression(index, 1);
     }
     public bool GetHasChoice()
     {
         return dialogueData.GetHasChoice(index);
+    }
+
+    public bool GetChoiced()
+    {
+        return dialogueData.GetChoiced(index);
     }
 
     public string GetGoodChoice()
@@ -189,9 +283,11 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue()
     {
-        GameManager.instace.SetState(GameManager.GameState.interaction);
+       
         display.dialogueManager = this;
-        display.SetThings();
+        //Debug.Log(index);
+        display.SetThings(); 
+        GameManager.instace.SetState(GameManager.GameState.interaction);
     }
     public bool GetDialogueEnded()
     {
@@ -231,16 +327,55 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void SetChoiceRoot(bool value)
+    public void SetChoiceRoot(bool value, bool bOrG)
+    {
+        if (!dialogueData.GetChoiced(index))
+        {
+            choiceRootDialogue = true;
+            _goodOrBadRoot = value;
+            rootIndex = 0;
+            rootLength = dialogueData.GetRootlength(index, _goodOrBadRoot);
+            if (bOrG)
+                dialogueData.SetGoodChoiced(index, true);
+            else
+                dialogueData.SetBadChoiced(index, true);
+
+        }
+        else
+        {
+            choiceRootDialogue = true;
+            rootIndex = 0;
+            if (dialogueData.GetChoiceChoosed(index, bOrG))
+            {
+                rootLength = dialogueData.GetRootlength(index, true);
+            }
+            else
+                rootLength = dialogueData.GetRootlength(index, false);
+
+            if (!dialogueData.GetChoiceChoosed(index, bOrG))
+            {
+                rootLength = dialogueData.GetRootlength(index, false);
+            }
+            else
+                rootLength = dialogueData.GetRootlength(index, true);
+        }
+    }
+    public void SetEnterChoiceRoot()
     {
         choiceRootDialogue = true;
-        _goodOrBadRoot = value;
-        rootIndex = 0;
-        rootLength = dialogueData.GetRootlength(index, _goodOrBadRoot);
     }
-
     public bool IsRootDialogue()
     {
         return choiceRootDialogue;
+    }
+
+    public bool isThisDialogueACutScene()
+    {
+        return dialogueData.GetIsThisDaiologueACusscene();
+    }
+
+    public void EndCutScene()
+    {
+        GameManager.instace.OnEndCutScene();
     }
 }

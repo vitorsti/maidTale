@@ -1,0 +1,587 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772bece35e9a9d24bb434283e25cb1ad, type: 3}
+  m_Name: Day1
+  m_EditorClassIdentifier: 
+  ch1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+  ch2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+  isThisDialogueaCutScene: 1
+  dialogueEnded: 0
+  textEnded: Nao temos mais assuntos para tratar hoje.
+  data:
+  - id: 0
+    text: "*Maria se aproxima de um port\xE3o e toca a campainha*\r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0, g: 0, b: 0, a: 0}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 1
+    text: "Voz misteriosa: Pois n\xE3o?"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0, g: 0, b: 0, a: 0}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 2
+    text: "Maria: Bom dia, me chamo Maria. Fui recomendada para a vaga de empregada
+      por uma colega, Valentina \xE9 o nome dela. Conversei com a dona Vict\xF3ria
+      e ela me pediu para vir fazer uma entrevista.\r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0, g: 0, b: 0, a: 0}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 3
+    text: "Voz Misteriosa: S\xF3 um momento por favor. "
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0, g: 0, b: 0, a: 0}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 4
+    text: "*A voz some e Maria aguarda ansiosamente em frente ao port\xE3o*"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0, g: 0, b: 0, a: 0}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 5
+    text: 'Voz Misteriosa: Tudo bem, senhorita. Pode entrar. '
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0, g: 0, b: 0, a: 0}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 6
+    text: "*O port\xE3o se abre e Maria caminha lentamente em dire\xE7\xE3o a porta.
+      Uma mulher para em sua frente e cruza os bra\xE7os*"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0, g: 0, b: 0, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 7
+    text: "Maria: Bom dia, a senhora deve ser a Dona Vict\xF3ria."
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0, g: 0, b: 0, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 8
+    text: "Victoria: Bom dia mocinha, isso mesmo. Mas quero que voc\xEA me chame
+      de Madame e n\xE3o de Senhora."
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 9
+    text: "Maria: Claro, Madame. \xC9 um prazer conhec\xEA-la, sou a Maria."
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 10
+    text: "*Maria estende a m\xE3o para Vict\xF3ria, que a olha de cima a baixo com
+      o cenho franzido*\r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 11
+    text: "Vict\xF3ria: Sim, eu sei. Dei uma boa analisada em voc\xEA e pude concluir
+      que voc\xEA aparenta ter muita experi\xEAncia com faxinas. Quero que saiba
+      que n\xE3o tolero qualquer m\xEDnimo erro, ent\xE3o espero que a limpeza seja
+      muito bem feita.\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 12
+    text: 'Maria: Pode ficar tranquila Madame, darei o meu melhor.'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 13
+    text: "Vict\xF3ria: \xC9 o que veremos. Vamos ver se sua amiga estava dizendo
+      a verdade. Vem, entre, vou mostrar-l\xE1 aonde voc\xEA ir\xE1 limpar hoje."
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 14
+    text: '*Maria assente e entra na casa*'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 15
+    text: "Vict\xF3ria: Sua tarefa \xE9 bem simples. Quero que voc\xEA deixe essa
+      sala o mais brilhante poss\xEDvel. Quero que tire todos os m\xF3veis e decora\xE7\xF5es
+      do lugar e passe pano em todos eles. Quero poder conseguir ver meu reflexo
+      nesse ch\xE3o! "
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 16
+    text: 'Maria: Pode deixar!'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 17
+    text: "Victoria: Os produtos de limpeza est\xE3o naquele balde, pode usar eles
+      \xE0 vontade. Vou at\xE9 o shopping fazer compras. Ent\xE3o se precisar de
+      mais alguma coisa, chame o mordomo, ele ir\xE1 te ajudar. Volto daqui algumas
+      horas para sua vistoria final e pra ver se voc\xEA \xE9 realmente boa ou n\xE3o. "
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 18
+    text: 'Maria: Claro madame. Bom passeio.'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 19
+    text: "*Victoria sai de casa. Maria pega os produtos para come\xE7ar a limpar*"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0, g: 0, b: 0, a: 0}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 2dee7f2fb585b764d9adc664b8c1cdca, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 20
+    text: 'Desconhecido: Bom dia!'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0, g: 0, b: 0, a: 0}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 21
+    text: '*Maria se assusta com a entrada repentina de um homem*'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 22
+    text: "Desconhecido: Desculpa, n\xE3o era minha inten\xE7\xE3o assust\xE1-la 
+      *Risos*"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 23
+    text: "Maria: Bom dia! N\xE3o tinha te visto a\xED."
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 24
+    text: "Desconhecido: S\xF3 vim pedir desculpas pelos modos de minha m\xE3e. Ela
+      n\xE3o sabe lidar muito bem com pessoas novas, ou com pessoas no geral\u2026 
+      *Risos*  Vim dizer tamb\xE9m que se precisar de qualquer coisa pode me chamar."
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 25
+    text: "Maria: Est\xE1 tudo bem, j\xE1 estou acostumada. *Risos* Obrigada pela
+      preocupa\xE7\xE3o. Vict\xF3ria n\xE3o comentou que tinha um filho, ent\xE3o
+      pe\xE7o desculpas pela minha falta de modos, mas como o senhor se chama? "
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 26
+    text: "Augustus: Nossa, onde eu estou com a cabe\xE7a!? Mil desculpas, me chamo
+      Augustus e voc\xEA \xE9 a\u2026?"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 27
+    text: "Augustus: Nossa, onde eu estou com a cabe\xE7a!? Mil desculpas, me chamo
+      Augustus e voc\xEA \xE9 a\u2026?"
+    hasChoice: 1
+    goodChoice: Fazer Brincadeira
+    badChoice: ...
+    goodChoiceRoot:
+    - text: "Maria: Maria, me chamo Maria. Mas, por favor, quero que me chame de
+        madame, \xE9 mais a minha cara. *Risos*"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: Muito engra\xE7adinha  *Risos* Acho que Maria combina com
+        voc\xEA, ent\xE3o \xE9 assim que irei cham\xE1-la. Sabe, gostei de voc\xEA,
+        sinto que podemos nos dar super bem!"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: Espero que sim Senhor Augustus, o senhor \xE9 muito simp\xE1tico."
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: Fico feliz em ouvir isso. Bom, vou deix\xE1-la trabalhar,
+        se precisar de algo \xE9 s\xF3 chamar, at\xE9 mais Maria."
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    badChoiceRoot:
+    - text: 'Maria: ...'
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: N\xE3o vai me dizer seu nome?"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: \u2026"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: 'Augustus: Tudo bem, Maria.'
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: Co\u2026Como o senhor sabe meu nome?"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: Escutei voc\xEA se apresentar para minha m\xE3e mais cedo.
+        Perguntei seu nome apenas para tentar ser simp\xE1tico, mas j\xE1 vi que
+        voc\xEA n\xE3o est\xE1 muito afim de companhia. Seja como for, vou deix\xE1-la
+        trabalhar, se precisar de algo \xE9 s\xF3 chamar, at\xE9 mais Maria."
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: At\xE9 mais senhor Augustus."
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 28
+    text: '*Maria volta ao trabalho.*'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot:
+    - text: "Maria: Maria, me chamo Maria. Mas, por favor, quero que me chame de
+        madame, \xE9 mais a minha cara. *Risos*"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: Muito engra\xE7adinha  *Risos* Acho que Maria combina com
+        voc\xEA, ent\xE3o \xE9 assim que irei cham\xE1-la. Sabe, gostei de voc\xEA,
+        sinto que podemos nos dar super bem!"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: Espero que sim Senhor Augustus, o senhor \xE9 muito simp\xE1tico."
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: Fico feliz em ouvir isso. Bom, vou deix\xE1-la trabalhar,
+        se precisar de algo \xE9 s\xF3 chamar, at\xE9 mais Maria."
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    badChoiceRoot:
+    - text: 'Maria: ...'
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: N\xE3o vai me dizer seu nome?"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: \u2026"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: 'Augustus: Tudo bem, Maria.'
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: Co\u2026Como o senhor sabe meu nome?"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: Escutei voc\xEA se apresentar para minha m\xE3e mais cedo.
+        Perguntei seu nome apenas para tentar ser simp\xE1tico, mas j\xE1 vi que
+        voc\xEA n\xE3o est\xE1 muito afim de companhia. Seja como for, vou deix\xE1-la
+        trabalhar, se precisar de algo \xE9 s\xF3 chamar, at\xE9 mais Maria."
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: At\xE9 mais senhor Augustus."
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0, g: 0, b: 0, a: 0}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  removeH: 0
