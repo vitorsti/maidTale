@@ -970,6 +970,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1239863178}
+        m_TargetAssemblyTypeName: RythemMiniGameManager, Assembly-CSharp
+        m_MethodName: SetObjectName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Task2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!212 &1172989683
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1249,6 +1261,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1272406463, guid: 2af85d7454c380b4c89e0b62d6c19f28, type: 3}
+      propertyPath: m_text
+      value: Sair
+      objectReference: {fileID: 0}
+    - target: {fileID: 1687395425, guid: 2af85d7454c380b4c89e0b62d6c19f28, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808769467228987881, guid: 2af85d7454c380b4c89e0b62d6c19f28, type: 3}
+      propertyPath: scoreDefault
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6808769467228987882, guid: 2af85d7454c380b4c89e0b62d6c19f28, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1527,6 +1551,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1239863178}
+        m_TargetAssemblyTypeName: RythemMiniGameManager, Assembly-CSharp
+        m_MethodName: SetObjectName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Task3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!212 &1782002214
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1603,7 +1639,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782002212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.94, y: 0.66, z: 0.06155961}
+  m_LocalPosition: {x: 3.7, y: 0.66, z: 0.06155961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2082,5 +2118,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1239863178}
+        m_TargetAssemblyTypeName: RythemMiniGameManager, Assembly-CSharp
+        m_MethodName: SetObjectName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Task1
           m_BoolArgument: 0
         m_CallState: 2

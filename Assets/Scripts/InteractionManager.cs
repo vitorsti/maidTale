@@ -20,15 +20,14 @@ public class InteractionManager : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetButton("VERDE0") && inRange )
+        if (Input.GetButtonDown("VERDE0") && inRange && GameManager.instace.GetState() == GameManager.GameState.play)
         {
-            if (GameManager.instace.GetState() == GameManager.GameState.play)
-            {
-                Debug.Log("StartDialogue");
-                GameManager.instace.SetState(GameManager.GameState.interaction);
+            
+                //Debug.Log("StartDialogue");
+                //GameManager.instace.SetState(GameManager.GameState.interaction);
                 //dialogueManager.StartDialogue();
                 action.Invoke();
-            }
+            
         }
 
     }

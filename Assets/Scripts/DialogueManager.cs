@@ -189,6 +189,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue()
     {
+        GameManager.instace.SetState(GameManager.GameState.interaction);
         display.dialogueManager = this;
         display.SetThings();
     }

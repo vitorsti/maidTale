@@ -40,8 +40,18 @@ public class DialogueUiDisplay : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
             PreviousButton();
 #endif
-    }
+        if (Input.GetButtonDown("VERDE0") && GameManager.instace.GetState() == GameManager.GameState.interaction)
+        {
+           NextButton();
+        }
 
+        if (Input.GetButtonDown("VERMELHO0") && GameManager.instace.GetState() == GameManager.GameState.interaction)
+        {
+            PreviousButton();
+        }
+
+
+    }
 
 
     public void SetThings()
@@ -200,7 +210,7 @@ public class DialogueUiDisplay : MonoBehaviour
             goodChoiceButton.GetComponentInChildren<TextMeshProUGUI>().text = dialogueManager.GetGoodChoice();
             badChoiceButton.GetComponentInChildren<TextMeshProUGUI>().text = dialogueManager.GetBadChoice();
             nextButton.gameObject.SetActive(false);
-            previousButton.gameObject.SetActive(false);
+            //previousButton.gameObject.SetActive(false);
         }
         else
         {

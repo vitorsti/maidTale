@@ -16,6 +16,8 @@ public class RythemMiniGameManager : MonoBehaviour
     int score;
     [SerializeField]
     TextMeshProUGUI uiText;
+    string taskObject;
+    
     private void OnEnable()
     {
         //score = scoreDefault;
@@ -29,6 +31,7 @@ public class RythemMiniGameManager : MonoBehaviour
 
     public void StartMiniGame()
     {
+        GameManager.instace.SetState(GameManager.GameState.interaction);
         score = scoreDefault;
         minigame.SetActive(true);
         StartCoroutine(MiniGameBegin());
@@ -85,6 +88,7 @@ public class RythemMiniGameManager : MonoBehaviour
 
     IEnumerator MiniGameEnd()
     {
+
         uiText.text = "End";
         yield return new WaitForSeconds(0.8f);
         uiText.text = "";
@@ -96,13 +100,38 @@ public class RythemMiniGameManager : MonoBehaviour
     {
         GameManager.instace.SetState(GameManager.GameState.play);
         TaskManager.instance.RemoveTask();
-        CancelInvoke();
+        
         NoteBehavior[] notes = FindObjectsOfType<NoteBehavior>();
         foreach (NoteBehavior i in notes)
         {
             DestroyImmediate(i.gameObject);
         }
-
+        CancelInvoke();
+        StopAllCoroutines();
+        //minigame.SetActive(false);
+        GameObject task = GameObject.Find(taskObject);
+        DestroyImmediate(task);
+        taskObject = "";
         minigame.SetActive(false);
+    }
+
+    public void CloseGame()
+    {
+        GameManager.instace.SetState(GameManager.GameState.play);
+        TaskManager.instance.RemoveTask();
+        CancelInvoke();
+        StopAllCoroutines();
+        NoteBehavior[] notes = FindObjectsOfType<NoteBehavior>();
+        foreach (NoteBehavior i in notes)
+        {
+            DestroyImmediate(i.gameObject);
+        }
+        taskObject = "";
+        minigame.SetActive(false);
+    }
+
+   public void SetObjectName(string value)
+    {
+        taskObject = value;
     }
 }
