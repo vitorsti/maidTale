@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instace;
     public GameObject buttonMenu;
+    public GameObject buttonMenu2;
     public GameObject buttonDayEnd;
     [SerializeField]
     string sceneToLoad;
@@ -34,7 +35,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "Day1Scene")
+
+        if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "intro")
+        {
+            if(buttonMenu.activeInHierarchy)
+            buttonMenu.GetComponent<Button>().onClick.Invoke();
+        }
+
+        if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "intro")
+        {
+            if(buttonMenu2.activeInHierarchy)
+                buttonMenu2.GetComponent<Button>().onClick.Invoke();
+        }
+        if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "Day1Scene")
         {
             buttonMenu.GetComponent<Button>().onClick.Invoke();
         }

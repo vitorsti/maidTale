@@ -1964,8 +1964,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonMenu: {fileID: 0}
+  buttonMenu2: {fileID: 0}
   buttonDayEnd: {fileID: 2114971158}
-  sceneToLoad: Day1Scene
+  sceneToLoad: intro
   _state: 2
 --- !u!4 &1773017742
 Transform:

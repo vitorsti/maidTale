@@ -457,23 +457,6 @@ MonoBehaviour:
   - id: 26
     text: "Augustus: Nossa, onde eu estou com a cabe\xE7a!? Mil desculpas, me chamo
       Augustus e voc\xEA \xE9 a\u2026?"
-    hasChoice: 0
-    goodChoice: 
-    badChoice: 
-    goodChoiceRoot: []
-    badChoiceRoot: []
-    afinityToAdd: 0
-    afinityToRemove: 0
-    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
-    c2: {r: 1, g: 1, b: 1, a: 1}
-    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
-    choiced: 0
-    badChoiceChoosed: 0
-    goodChoiceChoosed: 0
-  - id: 27
-    text: "Augustus: Nossa, onde eu estou com a cabe\xE7a!? Mil desculpas, me chamo
-      Augustus e voc\xEA \xE9 a\u2026?"
     hasChoice: 1
     goodChoice: Fazer Brincadeira
     badChoice: ...
@@ -528,7 +511,7 @@ MonoBehaviour:
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
-  - id: 28
+  - id: 27
     text: '*Maria volta ao trabalho.*'
     hasChoice: 0
     goodChoice: 

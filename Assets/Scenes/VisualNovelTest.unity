@@ -160,6 +160,7 @@ MonoBehaviour:
   index: 0
   length: 0
   display: {fileID: 0}
+  rootLength: 0
 --- !u!4 &16184952
 Transform:
   m_ObjectHideFlags: 0
@@ -339,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6965e9bf13e1ba34db9faaaef5a63e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueToLoad: Dialogue1
+  dialogueToLoad: Dialogue3
   afinityToLoad: Augustus
   dialogueData: {fileID: 0}
   afinityData: {fileID: 0}
@@ -347,6 +348,7 @@ MonoBehaviour:
   index: 0
   length: 0
   display: {fileID: 0}
+  rootLength: 0
 --- !u!4 &124048977
 Transform:
   m_ObjectHideFlags: 0
@@ -1289,6 +1291,7 @@ MonoBehaviour:
   index: 0
   length: 0
   display: {fileID: 0}
+  rootLength: 0
 --- !u!4 &1784892635
 Transform:
   m_ObjectHideFlags: 0
