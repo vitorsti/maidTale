@@ -11,18 +11,25 @@ public class NoteBehavior : MonoBehaviour
     void Start()
     {
         rt = GetComponent<RectTransform>();
+        StartCoroutine(DestroyBullet());
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.left * speed * Time.deltaTime);
-        Vector3 posi = Camera.main.WorldToScreenPoint(transform.position);
+        /*Vector3 posi = Camera.main.WorldToScreenPoint(transform.position);
         Debug.Log(posi.x);
-        if (posi.x < Screen.width-2000)
+        if (posi.x < Screen.width - 2000)
         {
             DestroyImmediate(this.gameObject);
-        }
-        
+        }*/
+
+    }
+
+    IEnumerator DestroyBullet()
+    {
+        yield return new WaitForSeconds(8f);
+        DestroyImmediate(this.gameObject);
     }
 }

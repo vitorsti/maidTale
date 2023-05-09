@@ -9,6 +9,9 @@ public class RythemMiniGameManager : MonoBehaviour
     public GameObject minigame;
     public GameObject prefab;
     public GameObject location;
+    public NoteBehavior[] pool;
+    public int poolLength = 10;
+
     public static RythemMiniGameManager instance;
     [SerializeField]
     int scoreDefault;
@@ -17,12 +20,24 @@ public class RythemMiniGameManager : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI uiText;
     string taskObject;
-    
+
+    [Header("Debugger")]
+    [SerializeField]
+    bool startSpawn;
+    private void OnValidate()
+    {
+        if (startSpawn)
+        {
+            StartMiniGame();
+            startSpawn = false;
+        }
+    }
     private void OnEnable()
     {
         //score = scoreDefault;
         //StartCoroutine(MiniGameBegin());
         //InvokeRepeating("Spawn", 1f, 1f);
+        
     }
     private void Awake()
     {
@@ -31,10 +46,15 @@ public class RythemMiniGameManager : MonoBehaviour
 
     public void StartMiniGame()
     {
+        Debug.Log("0");
         GameManager.instace.SetState(GameManager.GameState.interaction);
+        Debug.Log("1");
         score = scoreDefault;
+        Debug.Log("2");
         minigame.SetActive(true);
+        Debug.Log("3");
         StartCoroutine(MiniGameBegin());
+        Debug.Log("4");
     }
     // Start is called before the first frame update
     void Start()
@@ -89,7 +109,8 @@ public class RythemMiniGameManager : MonoBehaviour
         uiText.text = "GO!";
         yield return new WaitForSeconds(0.5f);
         uiText.text = "";
-        InvokeRepeating("Spawn", 0f, 1f);
+        //InvokeRepeating("Spawn", 0f, 1f);
+        StartCoroutine(SpawnPool());
         yield return null;
     }
 
@@ -140,5 +161,23 @@ public class RythemMiniGameManager : MonoBehaviour
    public void SetObjectName(string value)
     {
         taskObject = value;
+    }
+
+    IEnumerator SpawnPool()
+    {
+        int index = poolLength;
+        yield return new WaitForSeconds(0f);
+        Debug.Log(index);
+       while(index>0)
+        {
+            
+            GameObject go = Instantiate(prefab, location.transform.position, Quaternion.identity, this.transform);
+            go.GetComponent<NoteBehavior>().enabled = false;
+            index--;
+            yield return new WaitForSeconds(0f);
+            Debug.Log(index);   
+        }
+        pool = FindObjectsOfType<NoteBehavior>();
+        yield return null;
     }
 }

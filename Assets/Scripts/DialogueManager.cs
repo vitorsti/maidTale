@@ -303,13 +303,14 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("AfinityAdded");
         afinityData.IncreaseAfinity(dialogueData.GetAfinityToAdd(index));
         return;
-#endif
+#else
         if (!dialogueData.GetChoiced(index))
         {
             dialogueData.SetChoiced(index, true);
             afinityData.IncreaseAfinity(dialogueData.GetAfinityToAdd(index));
             Debug.Log("AfinityIncreased");
         }
+#endif
 
     }
     public void RemoveAfinity()
@@ -318,13 +319,14 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("AfinityRemoved");
         afinityData.DecreaseAfinity(dialogueData.GetAfinityToRemove(index));
         return;
-#endif
+#else
         if (!dialogueData.GetChoiced(index))
         {
             dialogueData.SetChoiced(index, true);
             afinityData.DecreaseAfinity(dialogueData.GetAfinityToRemove(index));
             Debug.Log("AfinityDecreased");
         }
+#endif
     }
 
     public void SetChoiceRoot(bool value, bool bOrG)
