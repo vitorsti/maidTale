@@ -7,11 +7,12 @@ public class NoteBehavior : MonoBehaviour
     [SerializeField]
     private float speed = 100f;
     RectTransform rt;
+    int index;
     // Start is called before the first frame update
     void Start()
     {
         rt = GetComponent<RectTransform>();
-        StartCoroutine(DestroyBullet());
+        //StartCoroutine(Reset());
     }
 
     // Update is called once per frame
@@ -26,10 +27,19 @@ public class NoteBehavior : MonoBehaviour
         }*/
 
     }
-
-    IEnumerator DestroyBullet()
+    public void StartBehavior()
     {
-        yield return new WaitForSeconds(8f);
-        DestroyImmediate(this.gameObject);
+        StartCoroutine(Reset());
+    }
+    IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(5f);
+        RythemMiniGameManager.instance.ResetNote(this.gameObject, index);
+        //DestroyImmediate(this.gameObject);
+    }
+
+    public void SetIndex(int value)
+    {
+        index = value;
     }
 }

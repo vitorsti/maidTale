@@ -10,6 +10,7 @@ public class RythemMiniGameManager : MonoBehaviour
     public GameObject prefab;
     public GameObject location;
     public NoteBehavior[] pool;
+    public List<GameObject> activeNotes, waitingNotes;
     public int poolLength = 10;
 
     public static RythemMiniGameManager instance;
@@ -42,6 +43,7 @@ public class RythemMiniGameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        StartCoroutine(SpawnPool());
     }
 
     public void StartMiniGame()
@@ -82,9 +84,28 @@ public class RythemMiniGameManager : MonoBehaviour
         }
     }
 
-    void Spawn()
+    IEnumerator Spawn()
     {
-        Instantiate(prefab, location.transform.position, Quaternion.identity, this.transform);
+        int index = waitingNotes.Count - 1;
+        Debug.Log(index);
+        yield return new WaitForSeconds(0.1f);
+        while (index > 0)
+        {
+            waitingNotes[index].GetComponent<NoteBehavior>().enabled = true;
+            waitingNotes[index].GetComponent<NoteBehavior>().StartBehavior();
+            waitingNotes[index].GetComponent<NoteBehavior>().SetIndex(0);
+            activeNotes.Add(waitingNotes[index]);
+            waitingNotes[index].GetComponent<NoteBehavior>().SetIndex(index);
+
+            waitingNotes.RemoveAt(index);
+            
+            index--;
+            Debug.Log(index);
+            yield return new WaitForSeconds(1f);
+        }
+        yield return null;
+
+        //Instantiate(prefab, location.transform.position, Quaternion.identity, this.transform);
     }
     public void RemoveScore()
     {
@@ -110,7 +131,8 @@ public class RythemMiniGameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         uiText.text = "";
         //InvokeRepeating("Spawn", 0f, 1f);
-        StartCoroutine(SpawnPool());
+        StartCoroutine( Spawn());
+        //StartCoroutine(SpawnPool());
         yield return null;
     }
 
@@ -173,6 +195,7 @@ public class RythemMiniGameManager : MonoBehaviour
             
             GameObject go = Instantiate(prefab, location.transform.position, Quaternion.identity, this.transform);
             go.GetComponent<NoteBehavior>().enabled = false;
+            waitingNotes.Add(go);
             index--;
             yield return new WaitForSeconds(0f);
             Debug.Log(index);   
@@ -180,4 +203,13 @@ public class RythemMiniGameManager : MonoBehaviour
         pool = FindObjectsOfType<NoteBehavior>();
         yield return null;
     }
+
+    public void ResetNote(GameObject note, int value)
+    {
+        activeNotes.RemoveAt(value);
+        note.GetComponent<NoteBehavior>().enabled = false;
+        note.transform.position = location.transform.position;
+        waitingNotes.Add(note);
+    }
+    
 }
