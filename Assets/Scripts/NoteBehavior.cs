@@ -31,10 +31,15 @@ public class NoteBehavior : MonoBehaviour
     {
         StartCoroutine(Reset());
     }
+
+    public void Stop()
+    {
+        StopAllCoroutines();
+    }
     IEnumerator Reset()
     {
-        yield return new WaitForSeconds(5f);
-        RythemMiniGameManager.instance.ResetNote(this.gameObject, index);
+        yield return new WaitForSeconds(8f);
+        RythemMiniGameManager.instance.ResetNote(this.gameObject);
         //DestroyImmediate(this.gameObject);
     }
 

@@ -35,13 +35,16 @@ public class TaskManager : MonoBehaviour
 
     public void RemoveTask()
     {
-        afinityData.IncreaseAfinity(1f);
-        tasksQuantity--;
-        if (tasksQuantity <= 0)
+        if (tasksQuantity > 0)
         {
-            tasksQuantity = 0;
-            dayCompleted.SetActive(true);
-            GameManager.instace.SetState(GameManager.GameState.cutscene);
+            afinityData.IncreaseAfinity(1f);
+            tasksQuantity--;
+            if (tasksQuantity <= 0)
+            {
+                tasksQuantity = 0;
+                dayCompleted.SetActive(true);
+                GameManager.instace.SetState(GameManager.GameState.cutscene);
+            }
         }
     }
 

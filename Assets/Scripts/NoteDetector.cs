@@ -28,7 +28,7 @@ public class NoteDetector : MonoBehaviour
     }
     public void DestroyNote()
     {
-        DestroyImmediate(note);
+        //DestroyImmediate(note);
         note = null;
     }
     public void SetInside(bool value)
@@ -56,5 +56,10 @@ public class NoteDetector : MonoBehaviour
             note = null;
             SetInside(false);
         }
+    }
+
+    public GameObject GetNote()
+    {
+        return note;
     }
 }
