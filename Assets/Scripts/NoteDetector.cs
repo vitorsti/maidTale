@@ -39,15 +39,16 @@ public class NoteDetector : MonoBehaviour
     {
         return inside;
     }
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Note")
+        if (other.gameObject.tag == "Note")
         {
             note = other.gameObject;
             SetInside(true);
+            Debug.Log("is note inside:" + GetInside());
         }
-
     }
+   
 
     private void OnTriggerExit2D(Collider2D other)
     {

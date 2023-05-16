@@ -59,6 +59,11 @@ public class GameManager : MonoBehaviour
                 buttonDayEnd.GetComponent<Button>().onClick.Invoke();
             }
         }
+
+        if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "CutsceneLoader")
+        {
+            buttonMenu.GetComponent<Button>().onClick.Invoke();
+        }
     }
     public void BeginLevel()
     {

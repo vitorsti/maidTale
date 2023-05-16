@@ -32,20 +32,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        var data = Resources.Load<DialogueContainer>("Dialogues/" + dialogueToLoad);
-
-        if (data != null)
-        {
-            dialogueData = data;
-            length = dialogueData.GetLength() - 1;
-        }
-
-        var afinity = Resources.Load<AfinityContainer>("Afinities/" + afinityToLoad);
-
-        if (afinity != null)
-        {
-            afinityData = afinity;
-        }
+        SetAfinityAndDialogueData(dialogueToLoad, afinityToLoad);
 
         display = FindObjectOfType<DialogueUiDisplay>();
         index = 0;
@@ -55,6 +42,7 @@ public class DialogueManager : MonoBehaviour
     {
         //index = 0;
         //NextText();
+        //if(dialogueData!=null)
         SetText(index, choiceRootDialogue, 0, false);
     }
     public int GetIndex()
@@ -65,7 +53,7 @@ public class DialogueManager : MonoBehaviour
     {
         return length;
     }
-    public 
+    public
     // Update is called once per frame
     void Update()
     {
@@ -237,7 +225,7 @@ public class DialogueManager : MonoBehaviour
         return dialogueData.GetColor(index, colorIndex);
     }
 
-    public Color GetRootColor( int colorIndex)
+    public Color GetRootColor(int colorIndex)
     {
         return dialogueData.GetRootColor(index, rootIndex, _goodOrBadRoot, colorIndex);
     }
@@ -283,10 +271,10 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue()
     {
-       
+
         display.dialogueManager = this;
         //Debug.Log(index);
-        display.SetThings(); 
+        display.SetThings();
         GameManager.instace.SetState(GameManager.GameState.interaction);
     }
     public bool GetDialogueEnded()
@@ -379,5 +367,26 @@ public class DialogueManager : MonoBehaviour
     public void EndCutScene()
     {
         GameManager.instace.OnEndCutScene();
+    }
+
+    public void SetAfinityAndDialogueData(string dialogueDataName, string afinityDataName)
+    {
+        var data = Resources.Load<DialogueContainer>("Dialogues/" + dialogueDataName);
+
+        if (data != null)
+        {
+            dialogueData = data;
+            length = dialogueData.GetLength() - 1;
+        }
+
+        var afinity = Resources.Load<AfinityContainer>("Afinities/" + afinityDataName);
+
+        if (afinity != null)
+        {
+            afinityData = afinity;
+        }
+
+        if (dialogueData != null)
+            SetText(index, choiceRootDialogue, 0, false);
     }
 }

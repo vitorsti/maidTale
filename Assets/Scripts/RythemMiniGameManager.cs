@@ -28,6 +28,7 @@ public class RythemMiniGameManager : MonoBehaviour
     [Header("Debugger")]
     [SerializeField]
     bool startSpawn;
+    int sliderValue;
     private void OnValidate()
     {
         if (startSpawn)
@@ -76,19 +77,23 @@ public class RythemMiniGameManager : MonoBehaviour
         {
             if (Input.GetButtonDown("VERDE0") && NoteDetector.instance.GetInside())
             {
-                //inside = false;
-                NoteDetector.instance.SetInside(false);
-                RemoveScore();
-                ResetNote(NoteDetector.instance.GetNote());
-                NoteDetector.instance.DestroyNote();
+                if (NoteDetector.instance.GetInside())
+                {
+                    IncreaseSlider();
+                    RemoveScore();
+                    ResetNote(NoteDetector.instance.GetNote());
+                    NoteDetector.instance.DestroyNote();
+                    NoteDetector.instance.SetInside(false);
+                }
+                else
+                {
+                    DecreaseSlider();
+                }
             }
 
-            if (Input.GetButtonDown("VERDE0") && !NoteDetector.instance.GetInside())
-            {
-                UpdateSlider(false);
-            }
+            
 
-            if (Input.GetButtonDown("VERMELHO0"))
+            if (Input.GetButton("VERMELHO0"))
             {
                 CloseGame();
             }
@@ -121,8 +126,8 @@ public class RythemMiniGameManager : MonoBehaviour
         //Instantiate(prefab, location.transform.position, Quaternion.identity, this.transform);
     }
     public void RemoveScore()
-    { 
-        UpdateSlider(true);
+    {
+        IncreaseSlider();
         score -= 1;
         uiText.text = score.ToString();
        // Debug.Log(score);
@@ -136,22 +141,27 @@ public class RythemMiniGameManager : MonoBehaviour
     }
     void SetSlide()
     {
+        sliderValue = 0;
         slider.minValue = score - scoreDefault;
         slider.maxValue = scoreDefault;
-        slider.value = score;
+        slider.value = sliderValue;
     }
-    public void UpdateSlider(bool value)
-    {
-        Debug.Log(value);
-        if (value)
-        {
-            Debug.Log("added slider");
-            slider.value+=1;
-            Debug.Log(slider.value);
-        }
-        else
-            slider.value-=1;
 
+    public void IncreaseSlider()
+    {
+        sliderValue++;
+        //slider.value = sliderValue;
+        UpdateSlider();
+    }
+    public void DecreaseSlider()
+    {
+        sliderValue--;
+        //slider.value = sliderValue;
+        UpdateSlider();
+    }
+    public void UpdateSlider()
+    {
+        slider.value = sliderValue;
         if (slider.value == slider.maxValue)
         {
             slider.value = slider.maxValue;

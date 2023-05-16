@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class CutsceneManager : MonoBehaviour
 {
     [SerializeField]
@@ -9,6 +10,11 @@ public class CutsceneManager : MonoBehaviour
     [Header("---- Debug")]
     [SerializeField]
     private bool beginCutscene;
+    [SerializeField]
+    private Button buttonMenu;
+    [SerializeField]
+    private TextMeshProUGUI title;
+    CutsceneLoaderContainer data;
     private void OnValidate()
     {
         if (beginCutscene)
@@ -19,16 +25,22 @@ public class CutsceneManager : MonoBehaviour
     }
     private void Awake()
     {
-        
+        data = Resources.Load<CutsceneLoaderContainer>("CutsceneLoaderData");
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("VERDE0") )
+        {
+            buttonMenu.GetComponent<Button>().onClick.Invoke();
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
-        //GameManager.instace.SetState(GameManager.GameState.cutscene);
-        //StartCoroutine(StartScene());
-        //dialogueManager.StartDialogue();
+        title.text = data.GetTitle();
 
-
+        dialogueManager.SetAfinityAndDialogueData(data.GetCutsceneToLoadName(),data.GetAfinityToLoadName());
     }
     public void OnBeginScene()
     {
