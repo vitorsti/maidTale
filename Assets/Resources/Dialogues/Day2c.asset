@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772bece35e9a9d24bb434283e25cb1ad, type: 3}
+  m_Name: Day2c
+  m_EditorClassIdentifier: 
+  ch1: {fileID: 0}
+  ch2: {fileID: 0}
+  isThisDialogueaCutScene: 0
+  dialogueEnded: 0
+  textEnded: 
+  data:
+  - id: 0
+    text: "Maria: Ol\xE1 senhor Augustus, como foi sua tarde? \r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 1
+    text: "Augustus: Incrivelmente entediante *Risos* Espero que a sua tenha sido
+      melhor. Conseguiu terminar tudo? \r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 2
+    text: "Maria: Consegui terminar sim. \r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 3
+    text: "Augustus: Uau! Voc\xEA conseguiu dar um jeito em tudo por aqui, ein!? 
+      At\xE9 parece outro ambiente.\r\n"
+    hasChoice: 1
+    goodChoice: Agradecer
+    badChoice: Se exibir
+    goodChoiceRoot:
+    - text: "Maria: Que isso senhor Augustus, s\xF3 fiz o meu trabalho. \r\n"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: E muito bem feito por sinal. \r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: Minha m\xE3e sempre me dizia: \u201CSe vai fazer alguma coisa,
+        fa\xE7a o seu melhor\u201D. \r\n"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: Sua m\xE3e \xE9 uma mulher muito s\xE1bia. Ela ficar\xE1 orgulhosa
+        em saber que sua filha segue o conselho \xE0 risca."
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Augustus: Acho que nunca vi meu quarto desse jeito. Parece at\xE9 rec\xE9m
+        montado *Risos* Voc\xEA \xE9 realmente muito boa no que faz!\r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: 'Maria: Obrigada Senhor Augustus, fico feliz em ouvir isso.
+
+'
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    badChoiceRoot:
+    - text: "Maria: Eu te disse, senhor Augustus, sou muito boa no que fa\xE7o. O
+        quarto est\xE1 perfeito, acredito que o senhor o nunca tenha visto assim,
+        n\xE3o \xE9!?\r\n"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: \xC9\u2026 \r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "*Augustus pigarreia, desconfort\xE1vel* \r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Augustus: Voc\xEA fez um \xF3timo trabalho mesmo\u2026\r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: Eu sei. Mas obrigada, senhor Augustus. Saber que o senhor tamb\xE9m
+        gostou \xE9 ainda mais motivador. \r\n"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 4
+    text: "Augustus: Bom, acho que voc\xEA j\xE1 terminou por hoje, n\xE3o \xE9?
+      \r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 5
+    text: "Maria: Acredito que sim. Foi um prazer encontrar com o senhor e conhecer
+      o Alfred hoje. \r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 6
+    text: "Augustus: Bom, ent\xE3o est\xE1 dispensada, senhorita Maria. Te espero
+      aqui amanh\xE3, no mesmo hor\xE1rio.   \r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 7
+    text: "Maria: Pode deixar. At\xE9 amanh\xE3, senhor Augustus\r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 8
+    text: "Augustus: At\xE9 amanh\xE3!\r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 9
+    text: '*Maria pega suas coisas e se retira*
+
+'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  removeH: 0

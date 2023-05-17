@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772bece35e9a9d24bb434283e25cb1ad, type: 3}
+  m_Name: Day2b
+  m_EditorClassIdentifier: 
+  ch1: {fileID: 0}
+  ch2: {fileID: 0}
+  isThisDialogueaCutScene: 0
+  dialogueEnded: 0
+  textEnded: 
+  data:
+  - id: 0
+    text: "Maria: Ol\xE1, se n\xE3o me engano o senhor deve ser o Alfred. \r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 1
+    text: 'Alfred: Isso mesmo e a senhorita deve ser Maria, a nova empregada.'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 2
+    text: 'Maria: Isso mesmo.
+
+'
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 3
+    text: "Alfred: Ouvi falar muito bem sobre a senhorita. Chegaram a me informar
+      que voc\xEA \xE9 a melhor faxineira que a casa j\xE1 teve *Risos* Espero que
+      os boatos sejam verdadeiros. \r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 4
+    text: "Maria: Tamb\xE9m espero. \r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 5
+    text: "Maria: Reconhe\xE7o sua voz de algu\xE9m lugar...\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 6
+    text: "Maria: J\xE1 sei! O senhor \xE9 o homem que sempre atende o interfone.
+      Estou certa?\r"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot: []
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 7
+    text: "Alfred: Mais do que certa! \xC9 uma de minhas muitas fun\xE7\xF5es nesta
+      casa. Acho que sou respons\xE1vel por 90% das tarefas daqui. P\xF4de-se dizer
+      que estou em todos os lugares ao mesmo tempo *Risos*  \r\n"
+    hasChoice: 1
+    goodChoice: Rir com Alfred
+    badChoice: Expressar medo
+    goodChoiceRoot:
+    - text: "Maria: O Senhor realmente parece saber de tudo por aqui *Risos* Quem
+        sabe o senhor n\xE3o me ensina alguns truques, ainda tenho muito o que aprender.\r\n"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Alfred: Quando o assunto \xE9 experi\xEAncia, pode apostar que tenho
+        de sobra *Risos* Seria um prazer te ajudar a entender as coisas por aqui.
+        Mas j\xE1 deixo avisado que ser\xE1 necess\xE1rio muita coopera\xE7\xE3o
+        e disciplina de interesse e coopera\xE7\xE3o da sua parte!\r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: 'Maria: Pode contar comigo!
+
+'
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Alfred: Vou deix\xE1-la terminar seu servi\xE7o. Foi um prazer conhec\xEA-la
+        oficialmente, senhorita Maria.  \r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: 'Maria: O prazer foi todo meu.
+
+'
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    badChoiceRoot:
+    - text: "Maria: O senhor n\xE3o acha esse neg\xF3cio de estar em v\xE1rios lugares
+        ao mesmo tempo um pouco bizarro? \r\n"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Alfred: N\xE3o, claro que n\xE3o \xE9, me ofende voc\xEA dizer tal coisa. 
+        O que voc\xEA chama de bizarrice, eu chamo de experi\xEAncia e dedica\xE7\xE3o.
+        Sou muito dedicado ao meu trabalho e fa\xE7o o poss\xEDvel para oferecer
+        o melhor para meus patr\xF5es. Se voc\xEA n\xE3o est\xE1 interessada em demonstrar
+        sua devo\xE7\xE3o, n\xE3o \xE9 problema meu. S\xF3 n\xE3o venha julgar meus
+        m\xE9todos. \r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: M-me desculpe senhor, n\xE3o era minha inten\xE7\xE3o te insultar.
+        S\xF3 achei a escolha de palavras um pouco inusitada. Perd\xE3o pelo mal
+        entendido.\r\n"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Alfred: Vou voltar para meus afazeres. Tenha uma boa tarde, senhorita. 
+        \r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  - id: 8
+    text: "*Alfred d\xE1 as costas para Maria*\r\n"
+    hasChoice: 0
+    goodChoice: 
+    badChoice: 
+    goodChoiceRoot: []
+    badChoiceRoot:
+    - text: "Maria: O senhor n\xE3o acha esse neg\xF3cio de estar em v\xE1rios lugares
+        ao mesmo tempo um pouco bizarro? \r\n"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Alfred: N\xE3o, claro que n\xE3o \xE9, me ofende voc\xEA dizer tal coisa. 
+        O que voc\xEA chama de bizarrice, eu chamo de experi\xEAncia e dedica\xE7\xE3o.
+        Sou muito dedicado ao meu trabalho e fa\xE7o o poss\xEDvel para oferecer
+        o melhor para meus patr\xF5es. Se voc\xEA n\xE3o est\xE1 interessada em demonstrar
+        sua devo\xE7\xE3o, n\xE3o \xE9 problema meu. S\xF3 n\xE3o venha julgar meus
+        m\xE9todos. \r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    - text: "Maria: M-me desculpe senhor, n\xE3o era minha inten\xE7\xE3o te insultar.
+        S\xF3 achei a escolha de palavras um pouco inusitada. Perd\xE3o pelo mal
+        entendido.\r\n"
+      c1: {r: 1, g: 1, b: 1, a: 1}
+      c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    - text: "Alfred: Vou voltar para meus afazeres. Tenha uma boa tarde, senhorita. 
+        \r\n"
+      c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+      c2: {r: 1, g: 1, b: 1, a: 1}
+    afinityToAdd: 0
+    afinityToRemove: 0
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
+    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    choiced: 0
+    badChoiceChoosed: 0
+    goodChoiceChoosed: 0
+  removeH: 0
