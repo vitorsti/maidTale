@@ -19,7 +19,7 @@ public class DialogueContainer : ScriptableObject
     [Serializable]
     private struct rootDialogue { [TextArea] public string text; public Color c1, c2; }
     [Serializable]
-    private struct dialogueData { public int id; [TextArea] public string text; public bool hasChoice; public string goodChoice, badChoice; public rootDialogue[] goodChoiceRoot, badChoiceRoot; /*[TextArea] public string[] goodChoiceRoot, badChoiceRoot;*/ public float afinityToAdd; public float afinityToRemove; public Color c1, c2; public Sprite e1, e2; public bool choiced; public bool badChoiceChoosed, goodChoiceChoosed; }
+    private struct dialogueData { public int id;  public string characterName; [TextArea] public string text; public bool hasChoice; public string goodChoice, badChoice; public rootDialogue[] goodChoiceRoot, badChoiceRoot; /*[TextArea] public string[] goodChoiceRoot, badChoiceRoot;*/ public float afinityToAdd; public float afinityToRemove; public Color c1, c2; public Sprite e1, e2; public bool choiced; public bool badChoiceChoosed, goodChoiceChoosed; }
     [SerializeField]
     private dialogueData[] data;
     [Header("----DEBUG-----")]
@@ -46,7 +46,10 @@ public class DialogueContainer : ScriptableObject
     {
         return data.FirstOrDefault(x => x.id == id).text;
     }
-
+    public string GetName(int id)
+    {
+        return data.FirstOrDefault(x => x.id == id).characterName;
+    }
     public string GetRootText(int id, int choiceRootId, bool goodOrBad)
     {
         Debug.Log(id);

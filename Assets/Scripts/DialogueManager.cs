@@ -366,7 +366,8 @@ public class DialogueManager : MonoBehaviour
 
     public void EndCutScene()
     {
-        GameManager.instace.OnEndCutScene();
+        //GameManager.instace.OnEndCutScene();
+        CutsceneManager.instance.OnEndCutScene();
     }
 
     public void SetAfinityAndDialogueData(string dialogueDataName, string afinityDataName)
@@ -388,5 +389,9 @@ public class DialogueManager : MonoBehaviour
 
         if (dialogueData != null)
             SetText(index, choiceRootDialogue, 0, false);
+    }
+
+    public string GetNameText() {
+       return dialogueData.GetName(index);
     }
 }

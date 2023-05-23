@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 [CreateAssetMenu(fileName = "CutsceneLoaderData", menuName = "ScriptableObject/CutsceneLoaderDataObject")]
 public class CutsceneLoaderContainer : ScriptableObject
 {
     [SerializeField]
-    string title;
+    string title, sceneToLoad;
     public void SetCutsceneToLoadName(string value)
     {
         PlayerPrefs.SetString("CutsceneToLoad", value);
@@ -32,8 +32,19 @@ public class CutsceneLoaderContainer : ScriptableObject
         title = value;
     }
 
+    public void SetSceneName(string value)
+    {
+        sceneToLoad = value;
+    }
+
     public string GetTitle()
     {
+       
         return title;
+    }
+
+    public string GetSceneToLoad()
+    {
+        return sceneToLoad;
     }
 }

@@ -19,7 +19,8 @@ MonoBehaviour:
   textEnded: 
   data:
   - id: 0
-    text: "Maria: Ol\xE1, se n\xE3o me engano o senhor deve ser o Alfred. \r\n"
+    characterName: 'Maria: '
+    text: "Ol\xE1, se n\xE3o me engano o senhor deve ser o Alfred. \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -35,7 +36,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 1
-    text: 'Alfred: Isso mesmo e a senhorita deve ser Maria, a nova empregada.'
+    characterName: 'Alfred: '
+    text: Isso mesmo e a senhorita deve ser Maria, a nova empregada.
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -51,7 +53,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 2
-    text: 'Maria: Isso mesmo.
+    characterName: 'Maria: '
+    text: 'Isso mesmo.
 
 '
     hasChoice: 0
@@ -69,9 +72,10 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 3
-    text: "Alfred: Ouvi falar muito bem sobre a senhorita. Chegaram a me informar
-      que voc\xEA \xE9 a melhor faxineira que a casa j\xE1 teve *Risos* Espero que
-      os boatos sejam verdadeiros. \r\n"
+    characterName: 'Alfred: '
+    text: "Ouvi falar muito bem sobre a senhorita. Chegaram a me informar que voc\xEA
+      \xE9 a melhor faxineira que a casa j\xE1 teve *Risos* Espero que os boatos
+      sejam verdadeiros. \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -87,7 +91,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 4
-    text: "Maria: Tamb\xE9m espero. \r\n"
+    characterName: 'Maria: '
+    text: "Tamb\xE9m espero. \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -103,7 +108,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 5
-    text: "Maria: Reconhe\xE7o sua voz de algu\xE9m lugar...\n"
+    characterName: 'Maria: '
+    text: "Reconhe\xE7o sua voz de algu\xE9m lugar...\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -119,8 +125,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 6
-    text: "Maria: J\xE1 sei! O senhor \xE9 o homem que sempre atende o interfone.
-      Estou certa?\r"
+    characterName: 'Maria: '
+    text: "J\xE1 sei! O senhor \xE9 o homem que sempre atende o interfone. Estou
+      certa?\r"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -136,9 +143,10 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 7
-    text: "Alfred: Mais do que certa! \xC9 uma de minhas muitas fun\xE7\xF5es nesta
-      casa. Acho que sou respons\xE1vel por 90% das tarefas daqui. P\xF4de-se dizer
-      que estou em todos os lugares ao mesmo tempo *Risos*  \r\n"
+    characterName: 'Alfred: '
+    text: "Mais do que certa! \xC9 uma de minhas muitas fun\xE7\xF5es nesta casa.
+      Acho que sou respons\xE1vel por 90% das tarefas daqui. P\xF4de-se dizer que
+      estou em todos os lugares ao mesmo tempo *Risos*  \r\n"
     hasChoice: 1
     goodChoice: Rir com Alfred
     badChoice: Expressar medo
@@ -199,6 +207,7 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 8
+    characterName: ...
     text: "*Alfred d\xE1 as costas para Maria*\r\n"
     hasChoice: 0
     goodChoice: 

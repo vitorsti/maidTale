@@ -14,7 +14,7 @@ public class DialogueUiDisplay : MonoBehaviour
     [SerializeField]
     private GameObject UiObject;
     [SerializeField]
-    private TextMeshProUGUI displayText;
+    private TextMeshProUGUI displayText, nameText;
     [SerializeField]
     private Button nextButton, previousButton, endDialogueButton;
     [SerializeField]
@@ -92,7 +92,7 @@ public class DialogueUiDisplay : MonoBehaviour
         if (dialogueManager.GetDialogueEnded())
         {
             StopAllCoroutines();
-
+            SetCharacterName();
             UiObject.SetActive(true);
             SetCharacterImage();
             //SetExpression();
@@ -110,7 +110,7 @@ public class DialogueUiDisplay : MonoBehaviour
         {
             Debug.Log("passou aqi");
             StopAllCoroutines();
-
+            SetCharacterName();
             UiObject.SetActive(true);
             SetCharacterImage();
             //SetExpression();
@@ -204,14 +204,20 @@ public class DialogueUiDisplay : MonoBehaviour
         //mooooooooooooooooooooooooooooooooooooreee
         //amogus
     }
+
+    void SetCharacterName()
+    {
+        nameText.text = dialogueManager.GetNameText();
+    }
     void NextButton()
     {
         /*if (dialogueManager.GetHasChoice())
         {
             
         }*/
-
-        dialogueManager.NextText();
+       
+        dialogueManager.NextText(); 
+        SetCharacterName();
         ChoiceOption();
         StopAllCoroutines();
         SetCharacterImage();
@@ -225,8 +231,9 @@ public class DialogueUiDisplay : MonoBehaviour
 
     void PreviousButton()
     {
-
+        
         dialogueManager.PreviousText();
+        SetCharacterName();
         ChoiceOption();
         StopAllCoroutines();
         SetCharacterImage();
@@ -302,6 +309,8 @@ public class DialogueUiDisplay : MonoBehaviour
             }
         }*/
     }
+
+    
     IEnumerator DisplayText()
     {
         int index = 0;

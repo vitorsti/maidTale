@@ -582,6 +582,7 @@ MonoBehaviour:
   titleName: Dia 1
   cutsceneToLoadName: Day1
   afinityToloadName: Augustus
+  sceneToload: Game
   data: {fileID: 0}
 --- !u!1 &489260499
 GameObject:
@@ -924,4 +925,5 @@ MonoBehaviour:
   titleName: Prologo
   cutsceneToLoadName: Intro
   afinityToloadName: Augustus
+  sceneToload: Menu
   data: {fileID: 0}

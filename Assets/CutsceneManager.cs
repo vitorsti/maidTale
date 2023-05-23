@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class CutsceneManager : MonoBehaviour
 {
     [SerializeField]
@@ -11,10 +12,14 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField]
     private bool beginCutscene;
     [SerializeField]
-    private Button buttonMenu;
+    private Button buttonMenu, endButton;
     [SerializeField]
     private TextMeshProUGUI title;
     CutsceneLoaderContainer data;
+    public static CutsceneManager instance;
+    [SerializeField]
+    GameObject endCutsceneScreen;
+    string sceneToLoad;
     private void OnValidate()
     {
         if (beginCutscene)
@@ -25,6 +30,7 @@ public class CutsceneManager : MonoBehaviour
     }
     private void Awake()
     {
+        instance = this;
         data = Resources.Load<CutsceneLoaderContainer>("CutsceneLoaderData");
     }
 
@@ -39,8 +45,9 @@ public class CutsceneManager : MonoBehaviour
     void Start()
     {
         title.text = data.GetTitle();
-
+        sceneToLoad = data.GetSceneToLoad();
         dialogueManager.SetAfinityAndDialogueData(data.GetCutsceneToLoadName(),data.GetAfinityToLoadName());
+
     }
     public void OnBeginScene()
     {
@@ -54,6 +61,18 @@ public class CutsceneManager : MonoBehaviour
     public void OnEndCutScene()
     {
         GameManager.instace.SetState(GameManager.GameState.play);
+
+        endCutsceneScreen.SetActive(true);
+        if (title.text == "Intro")
+        {
+            PlayerPrefs.SetInt("levels", 1);
+        }
         //DialogueUiDisplay.
+    }
+
+  
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

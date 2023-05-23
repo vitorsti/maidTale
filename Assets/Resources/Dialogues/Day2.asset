@@ -19,6 +19,7 @@ MonoBehaviour:
   textEnded: 
   data:
   - id: 0
+    characterName: ...
     text: "*Maria se aproxima do port\xE3o e aperta a campainha*"
     hasChoice: 0
     goodChoice: 
@@ -35,7 +36,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 1
-    text: "Voz Misteriosa: Pois n\xE3o?\r"
+    characterName: 'Voz Misteriosa: '
+    text: "Pois n\xE3o?\r"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -51,7 +53,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 2
-    text: "Maria: Oi, bom dia. \xC9 a Maria, a nova empregada.\r\n"
+    characterName: 'Maria: '
+    text: "Oi, bom dia. \xC9 a Maria, a nova empregada.\r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -67,8 +70,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 3
-    text: "Voz Misteriosa: Bom dia, que bom que voltou! A partir de agora voc\xEA
-      pode se identificar apenas como Maria."
+    characterName: 'Voz Misteriosa: '
+    text: "Bom dia, que bom que voltou! A partir de agora voc\xEA pode se identificar
+      apenas como Maria."
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -84,7 +88,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 4
-    text: "\rMaria: Tudo bem, senhor."
+    characterName: 'Maria: '
+    text: Tudo bem, senhor.
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -100,8 +105,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 5
-    text: "Voz Misteriosa: Vou abrir o port\xE3o para voc\xEA. Ah e mais uma coisa,
-      seja bem-vinda \xE0 equipe!"
+    characterName: 'Voz Misteriosa: '
+    text: "Vou abrir o port\xE3o para voc\xEA. Ah e mais uma coisa, seja bem-vinda
+      \xE0 equipe!"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -117,7 +123,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 6
-    text: 'Maria: Obrigada!
+    characterName: 'Maria: '
+    text: 'Obrigada!
 
 '
     hasChoice: 0
@@ -135,6 +142,7 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 7
+    characterName: ...
     text: "*O port\xE3o se abre e Maria caminha em dire\xE7\xE3o a entrada da casa.
       Onde Augustus se encontra escorado em um dos pilares com um sorriso no rosto*
       \r"
@@ -153,7 +161,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 8
-    text: "Augustus: Bom dia! \xC9 bom te ver de novo.\r\n"
+    characterName: 'Augustus: '
+    text: "Bom dia! \xC9 bom te ver de novo.\r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -169,8 +178,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 9
-    text: "Maria: Bom dia Senhor Augustus! \xC9 bom estar de volta. Sua m\xE3e n\xE3o
-      est\xE1 em casa hoje?\r\n"
+    characterName: 'Maria: '
+    text: "Bom dia Senhor Augustus! \xC9 bom estar de volta. Sua m\xE3e n\xE3o est\xE1
+      em casa hoje?\r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -186,9 +196,10 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 10
-    text: "Augustus: N\xE3o, ela teve que fazer uma viagem de \xFAltima hora, saiu
-      um pouco antes de voc\xEA chegar. Quando disse que ela quase nunca est\xE1
-      em casa, eu n\xE3o estava brincando. *Risos* \r\n"
+    characterName: 'Augustus: '
+    text: "N\xE3o, ela teve que fazer uma viagem de \xFAltima hora, saiu um pouco
+      antes de voc\xEA chegar. Quando disse que ela quase nunca est\xE1 em casa,
+      eu n\xE3o estava brincando. *Risos* \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -204,8 +215,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 11
-    text: 'Maria: Achei que ela ia ficar em casa nessa minha primeira semana, para
-      ficar de olho em mim. *Risos*
+    characterName: 'Maria: '
+    text: 'Achei que ela ia ficar em casa nessa minha primeira semana, para ficar
+      de olho em mim. *Risos*
 
 '
     hasChoice: 0
@@ -223,10 +235,11 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 12
-    text: "Augustus: N\xE3o. Durante essa semana seremos apenas eu e voc\xEA\u2026
-      E os outros empregados, \xE9 claro *Risos* Mas hoje o n\xFAmero de funcion\xE1rios
-      est\xE1 meio limitado. S\xF3 tem voc\xEA, o Alfred e o cozinheiro. Valentina
-      saiu um pouco antes da minha m\xE3e e a jardineira est\xE1 de folga.\r\n"
+    characterName: 'Augustus:'
+    text: "N\xE3o. Durante essa semana seremos apenas eu e voc\xEA\u2026 E os outros
+      empregados, \xE9 claro *Risos* Mas hoje o n\xFAmero de funcion\xE1rios est\xE1
+      meio limitado. S\xF3 tem voc\xEA, o Alfred e o cozinheiro. Valentina saiu um
+      pouco antes da minha m\xE3e e a jardineira est\xE1 de folga.\r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -242,8 +255,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 13
-    text: "Maria: Me desculpe a pergunta, ainda n\xE3o sei o nome dos funcion\xE1rios.
-      Alfred seria\u2026?"
+    characterName: 'Maria: '
+    text: "Me desculpe a pergunta, ainda n\xE3o sei o nome dos funcion\xE1rios. Alfred
+      seria\u2026?"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -259,11 +273,11 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 14
-    text: "Augustus: N\xE3o precisa pedir desculpas. Alfred \xE9 nosso mordomo. ele
-      trabalha conosco a anos, at\xE9 ouso dizer que ele \xE9 nosso funcion\xE1rio
-      mais fiel. Ele \xE9 super simp\xE1tico, um pouco r\xEDgido com quem ele n\xE3o
-      conhece, mas depois que voc\xEA pega afinidade voc\xEA percebe que \xE9 s\xF3
-      fachada."
+    characterName: 'Augustus: '
+    text: "N\xE3o precisa pedir desculpas. Alfred \xE9 nosso mordomo. ele trabalha
+      conosco a anos, at\xE9 ouso dizer que ele \xE9 nosso funcion\xE1rio mais fiel.
+      Ele \xE9 super simp\xE1tico, um pouco r\xEDgido com quem ele n\xE3o conhece,
+      mas depois que voc\xEA pega afinidade voc\xEA percebe que \xE9 s\xF3 fachada."
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -279,8 +293,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 15
-    text: "Maria: Uau, pelo jeito que voc\xEA fala voc\xEAs devem ser bem pr\xF3ximos.
-      \r\n"
+    characterName: 'Maria: '
+    text: "Uau, pelo jeito que voc\xEA fala voc\xEAs devem ser bem pr\xF3ximos. \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -296,8 +310,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 16
-    text: "Augustus: E somos. Conhe\xE7o Alfred desde pequeno, ele literalmente me
-      viu crescer.\r\n"
+    characterName: 'Augustus: '
+    text: "E somos. Conhe\xE7o Alfred desde pequeno, ele literalmente me viu crescer.\r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -313,7 +327,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 17
-    text: "Maria: Espero nos darmos bem, assim como voc\xEAs. \r\n"
+    characterName: 'Maria: '
+    text: "Espero nos darmos bem, assim como voc\xEAs. \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -329,8 +344,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 18
-    text: "Augustus: V\xE3o sim. Agora vem, vou te levar at\xE9 o lugar aonde voc\xEA
-      vai limpar hoje.\r\n"
+    characterName: 'Augustus: '
+    text: "V\xE3o sim. Agora vem, vou te levar at\xE9 o lugar aonde voc\xEA vai limpar
+      hoje.\r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -346,6 +362,7 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 19
+    characterName: ...
     text: "*Augustus e Maria entram na casa e caminham distraidamente em dire\xE7\xE3o
       a um  c\xF4modo*\r\n"
     hasChoice: 0
@@ -363,7 +380,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 20
-    text: "Augustus: \xC9 aqui. Bem-vinda ao meu humilde quarto. O que acha?\r\n"
+    characterName: 'Augustus: '
+    text: "\xC9 aqui. Bem-vinda ao meu humilde quarto. O que acha?\r\n"
     hasChoice: 1
     goodChoice: Brincar
     badChoice: "Falar s\xE9rio"
@@ -423,6 +441,7 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 21
+    characterName: ...
     text: "*Maria pega os produtos de limpeza e come\xE7a a limpar o quarto* \r\n"
     hasChoice: 0
     goodChoice: 

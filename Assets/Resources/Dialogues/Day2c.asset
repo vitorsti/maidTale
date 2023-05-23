@@ -19,7 +19,8 @@ MonoBehaviour:
   textEnded: 
   data:
   - id: 0
-    text: "Maria: Ol\xE1 senhor Augustus, como foi sua tarde? \r\n"
+    characterName: 'Maria: '
+    text: "Ol\xE1 senhor Augustus, como foi sua tarde? \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -35,8 +36,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 1
-    text: "Augustus: Incrivelmente entediante *Risos* Espero que a sua tenha sido
-      melhor. Conseguiu terminar tudo? \r\n"
+    characterName: 'Augustus: '
+    text: "Incrivelmente entediante *Risos* Espero que a sua tenha sido melhor. Conseguiu
+      terminar tudo? \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -52,7 +54,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 2
-    text: "Maria: Consegui terminar sim. \r\n"
+    characterName: 'Maria: '
+    text: "Consegui terminar sim. \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -68,8 +71,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 3
-    text: "Augustus: Uau! Voc\xEA conseguiu dar um jeito em tudo por aqui, ein!? 
-      At\xE9 parece outro ambiente.\r\n"
+    characterName: 'Augustus: '
+    text: "Uau! Voc\xEA conseguiu dar um jeito em tudo por aqui, ein!?  At\xE9 parece
+      outro ambiente.\r\n"
     hasChoice: 1
     goodChoice: Agradecer
     badChoice: Se exibir
@@ -126,8 +130,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 4
-    text: "Augustus: Bom, acho que voc\xEA j\xE1 terminou por hoje, n\xE3o \xE9?
-      \r\n"
+    characterName: 'Augustus: '
+    text: "Bom, acho que voc\xEA j\xE1 terminou por hoje, n\xE3o \xE9? \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -143,8 +147,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 5
-    text: "Maria: Acredito que sim. Foi um prazer encontrar com o senhor e conhecer
-      o Alfred hoje. \r\n"
+    characterName: 'Maria: '
+    text: "Acredito que sim. Foi um prazer encontrar com o senhor e conhecer o Alfred
+      hoje. \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -160,8 +165,9 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 6
-    text: "Augustus: Bom, ent\xE3o est\xE1 dispensada, senhorita Maria. Te espero
-      aqui amanh\xE3, no mesmo hor\xE1rio.   \r\n"
+    characterName: 'Augustus: '
+    text: "Bom, ent\xE3o est\xE1 dispensada, senhorita Maria. Te espero aqui amanh\xE3,
+      no mesmo hor\xE1rio.   \r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -177,7 +183,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 7
-    text: "Maria: Pode deixar. At\xE9 amanh\xE3, senhor Augustus\r\n"
+    characterName: 'Maria: '
+    text: "Pode deixar. At\xE9 amanh\xE3, senhor Augustus\r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -193,7 +200,8 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 8
-    text: "Augustus: At\xE9 amanh\xE3!\r\n"
+    characterName: 'Augustus: '
+    text: "At\xE9 amanh\xE3!\r\n"
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -209,6 +217,7 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 9
+    characterName: ...
     text: '*Maria pega suas coisas e se retira*
 
 '

@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "intro")
+        /*if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "intro")
         {
             if(buttonMenu.activeInHierarchy)
             buttonMenu.GetComponent<Button>().onClick.Invoke();
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "CutsceneLoader")
         {
             buttonMenu.GetComponent<Button>().onClick.Invoke();
-        }
+        }*/
     }
     public void BeginLevel()
     {
