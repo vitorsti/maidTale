@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager /*: MonoBehaviour*/
 {
     public static GameManager instace;
     public GameObject buttonMenu;
@@ -12,18 +12,23 @@ public class GameManager : MonoBehaviour
     public GameObject buttonDayEnd;
     [SerializeField]
     string sceneToLoad;
-
+    public GameManager()
+    {
+        instace = this;
+        _state = GameState.play;
+    }
     public enum GameState { none,pause, play, interaction, cutscene}
     public GameState _state;
     // Start is called before the first frame update
-    void Awake()
+    /*void Awake()
     {
+
         instace = this;
        
         _state = GameState.play;
-    }
+    }*/
 
-    private void Start()
+    /*private void Start()
     {
         if(SceneManager.GetActiveScene().name == "Game")
         { 
@@ -31,7 +36,7 @@ public class GameManager : MonoBehaviour
             TimerManager.instance.StartTimer();
 
         }
-    }
+    }*/
     // Update is called once per frame
     void Update()
     {
