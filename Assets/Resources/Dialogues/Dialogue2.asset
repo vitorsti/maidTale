@@ -19,7 +19,7 @@ MonoBehaviour:
   textEnded: 
   data:
   - id: 0
-    characterName: 'Vallentina:'
+    characterName: 'Valentina:'
     text: Bom dia amiga! Que bom que conseguiu o emprego!
     hasChoice: 0
     goodChoice: 
@@ -36,7 +36,7 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 1
-    characterName: 'Vallentina:'
+    characterName: 'Valentina:'
     text: Bom dia amiga! Que bom que conseguiu o emprego!
     hasChoice: 0
     goodChoice: 
@@ -45,8 +45,8 @@ MonoBehaviour:
     badChoiceRoot: []
     afinityToAdd: 0
     afinityToRemove: 0
-    c1: {r: 1, g: 1, b: 1, a: 1}
-    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+    c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
     choiced: 0
@@ -62,8 +62,8 @@ MonoBehaviour:
     badChoiceRoot: []
     afinityToAdd: 0
     afinityToRemove: 0
-    c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
-    c2: {r: 1, g: 1, b: 1, a: 1}
+    c1: {r: 1, g: 1, b: 1, a: 1}
+    c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
     choiced: 0
@@ -72,7 +72,8 @@ MonoBehaviour:
   - id: 3
     characterName: 'Valentina: '
     text: Bom, chega de papo e vamos ao trabalho, para realizar as tarefas aproxime
-      perto de uma mancha vermelha e aperte tecla E ou BOTAO VERDE  para iniciar
+      perto de uma mancha vermelha e aperte tecla E ou <color=green>BOTAO VERDE</color> 
+      para iniciar
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -90,7 +91,8 @@ MonoBehaviour:
   - id: 4
     characterName: 'Valentina: '
     text: "Um minigame ir\xE1 come\xE7ar, espere a esfera da direita se alinhar com
-      a esfera da esquerda, quando estiverem alinhadas, aperte E ou BOTAO VERDE."
+      a esfera da esquerda, quando estiverem alinhadas, aperte E ou <color=green>BOTAO
+      VERDE</color>."
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -107,7 +109,7 @@ MonoBehaviour:
     goodChoiceChoosed: 0
   - id: 5
     characterName: 'Valentina: '
-    text: Pressione  BOTAO VERMELHO ou SAIR para encerrar o dialogo.
+    text: Pressione  <color=red>BOTAO VERMELHO</color> ou SAIR para encerrar o dialogo.
     hasChoice: 0
     goodChoice: 
     badChoice: 

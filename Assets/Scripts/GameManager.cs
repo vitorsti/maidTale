@@ -4,31 +4,34 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameManager /*: MonoBehaviour*/
+public class GameManager : MonoBehaviour
 {
     public static GameManager instace;
     public GameObject buttonMenu;
     public GameObject buttonMenu2;
-    public GameObject buttonDayEnd;
-    [SerializeField]
-    string sceneToLoad;
-    public GameManager()
-    {
-        instace = this;
-        _state = GameState.play;
-    }
+    public GameObject buttonDayEnd; 
     public enum GameState { none,pause, play, interaction, cutscene}
     public GameState _state;
+    [SerializeField]
+    string sceneToLoad;
+    /*public GameManager(GameState nState)
+    {
+        instace = this;
+        _state = nState;
+    }
+
+    GameManager gm = new GameManager(GameState.play);*/
+   
     // Start is called before the first frame update
-    /*void Awake()
+    void Awake()
     {
 
         instace = this;
        
         _state = GameState.play;
-    }*/
+    }
 
-    /*private void Start()
+    private void Start()
     {
         if(SceneManager.GetActiveScene().name == "Game")
         { 
@@ -36,12 +39,12 @@ public class GameManager /*: MonoBehaviour*/
             TimerManager.instance.StartTimer();
 
         }
-    }*/
+    }
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
 
-        /*if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "intro")
+        if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "intro")
         {
             if(buttonMenu.activeInHierarchy)
             buttonMenu.GetComponent<Button>().onClick.Invoke();
@@ -68,8 +71,8 @@ public class GameManager /*: MonoBehaviour*/
         if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "CutsceneLoader")
         {
             buttonMenu.GetComponent<Button>().onClick.Invoke();
-        }*/
-    }
+        }
+    }*/
     public void BeginLevel()
     {
         TimerManager.instance.StartTimer();
