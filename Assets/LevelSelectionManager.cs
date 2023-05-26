@@ -12,6 +12,12 @@ public class LevelSelectionManager : MonoBehaviour
     {
         i = 0;
         index = 0;
+
+
+
+        SetSelectorPosition(index);
+        
+
     }
     private void Update()
     {
