@@ -246,6 +246,11 @@ public class DialogueManager : MonoBehaviour
         //return dialogueData.GetCharacterSprite2();
         return dialogueData.GetExpression(index, 1);
     }
+
+    public Sprite GetBackground()
+    {
+        return dialogueData.GetBakgroundImage(index);
+    }
     public bool GetHasChoice()
     {
         return dialogueData.GetHasChoice(index);

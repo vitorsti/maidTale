@@ -251,7 +251,7 @@ public class RythemMiniGameManager : MonoBehaviour
     {
         state = MiniGameState.stop;
         GameManager.instace.SetState(GameManager.GameState.play);
-        TaskManager.instance.RemoveTask();
+        //TaskManager.instance.RemoveTask();
         //CancelInvoke();
         StopAllCoroutines();
 

@@ -19,6 +19,7 @@ MonoBehaviour:
   textEnded: 
   data:
   - id: 0
+    characterName: 
     text: "Maria: eu realmente n\xE3o sei como vou pagar as contas desse m\xEAs,
       perdi meu emprego e t\xE1 dif\xEDcil arrumar um novo\r\n"
     hasChoice: 0
@@ -32,10 +33,12 @@ MonoBehaviour:
     c2: {r: 0, g: 0, b: 0, a: 0}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
+    backGroundImage: {fileID: 21300000, guid: 882a98713ca0da742a4d3d3df34b2ef6, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 1
+    characterName: 
     text: "*Toc toc\r*\n"
     hasChoice: 0
     goodChoice: 
@@ -48,10 +51,12 @@ MonoBehaviour:
     c2: {r: 0, g: 0, b: 0, a: 0}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
+    backGroundImage: {fileID: 21300000, guid: 882a98713ca0da742a4d3d3df34b2ef6, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 2
+    characterName: 
     text: "*Maria vai correndo abrir a porta\r*\n"
     hasChoice: 0
     goodChoice: 
@@ -64,10 +69,12 @@ MonoBehaviour:
     c2: {r: 0, g: 0, b: 0, a: 0}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
+    backGroundImage: {fileID: 21300000, guid: 882a98713ca0da742a4d3d3df34b2ef6, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 3
+    characterName: 
     text: 'Valentina: Boa tarde Maria!!'
     hasChoice: 0
     goodChoice: 
@@ -80,10 +87,12 @@ MonoBehaviour:
     c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
+    backGroundImage: {fileID: 21300000, guid: 882a98713ca0da742a4d3d3df34b2ef6, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 4
+    characterName: 
     text: 'Maria: Boa tarde!!
 
 '
@@ -98,10 +107,12 @@ MonoBehaviour:
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
+    backGroundImage: {fileID: 21300000, guid: 882a98713ca0da742a4d3d3df34b2ef6, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 5
+    characterName: 
     text: "Valentina: Voc\xEA estava procurando um emprego, n\xE9? J\xE1 conseguiu
       achar?\r\n"
     hasChoice: 0
@@ -115,10 +126,12 @@ MonoBehaviour:
     c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
+    backGroundImage: {fileID: 21300000, guid: 882a98713ca0da742a4d3d3df34b2ef6, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 6
+    characterName: 
     text: "Maria: Ainda n\xE3o... T\xE1 meio dif\xEDcil"
     hasChoice: 0
     goodChoice: 
@@ -131,10 +144,12 @@ MonoBehaviour:
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
+    backGroundImage: {fileID: 21300000, guid: 882a98713ca0da742a4d3d3df34b2ef6, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 7
+    characterName: 
     text: "Valentina: Uma das minhas colegas foi demitida, e meus chefes falaram
       que eu poderia chamar uma amiga para trabalhar l\xE1, j\xE1 que eles confiam
       muito em mim,  me deixando escolher algu\xE9m, voc\xEA est\xE1 interessada?"
@@ -149,10 +164,12 @@ MonoBehaviour:
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
+    backGroundImage: {fileID: 21300000, guid: 882a98713ca0da742a4d3d3df34b2ef6, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 8
+    characterName: 
     text: "Maria: \xC9 \xF3bvio!! Eu agrade\xE7o muito mesmo!! Voc\xEA trabalha como
       empregada dom\xE9stica, n\xE9?"
     hasChoice: 0
@@ -166,10 +183,12 @@ MonoBehaviour:
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
+    backGroundImage: {fileID: 21300000, guid: 882a98713ca0da742a4d3d3df34b2ef6, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   - id: 9
+    characterName: 
     text: "Valentina: Isso mesmo, vou falar pra minha chefe que j\xE1 achei algu\xE9m,
       voc\xEA pode come\xE7ar amanh\xE3, vou te passar o endere\xE7o!!"
     hasChoice: 0
@@ -183,6 +202,7 @@ MonoBehaviour:
     c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
     e2: {fileID: 21300000, guid: 6a494a75947788a45b4026028f88c573, type: 3}
+    backGroundImage: {fileID: 21300000, guid: 882a98713ca0da742a4d3d3df34b2ef6, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0

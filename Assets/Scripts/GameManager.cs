@@ -45,9 +45,9 @@ public class GameManager : MonoBehaviour
         }
     }
     // Update is called once per frame
-    /*void Update()
+   void Update()
     {
-
+ /*
         if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "intro")
         {
             if(buttonMenu.activeInHierarchy)
@@ -70,25 +70,35 @@ public class GameManager : MonoBehaviour
             {
                 buttonDayEnd.GetComponent<Button>().onClick.Invoke();
             }
-        }
+        }*/
 
         if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "CutsceneLoader")
         {
             buttonMenu.GetComponent<Button>().onClick.Invoke();
         }
-    }*/
+
+        if (Input.GetButtonDown("VERDE0") && SceneManager.GetActiveScene().name == "CutsceneLoader" && buttonMenu2.activeInHierarchy)
+        {
+            buttonMenu2.GetComponent<Button>().onClick.Invoke();
+        }
+
+        if(Input.GetButtonDown("MENU") && SceneManager.GetActiveScene().name == "Game")
+        {
+            buttonMenu.GetComponent<Button>().onClick.Invoke();
+        }
+    }
     public void BeginLevel()
     {
      
         int index = PlayerPrefs.GetInt("LevelSelected", 0);
-
+#if !UNITY_EDITOR
         foreach(GameObject i in levels)
         {
             i.SetActive(false);
         }
 
         levels[index].SetActive(true);
-
+#endif
         TaskManager.instance.SetThings();
 
         TimerManager.instance.StartTimer();
@@ -111,5 +121,8 @@ public class GameManager : MonoBehaviour
       
     }
 
-    //public void BackToMenu()
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

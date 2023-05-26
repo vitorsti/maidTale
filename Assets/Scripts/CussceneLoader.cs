@@ -14,21 +14,32 @@ public class CussceneLoader : MonoBehaviour
     int levelToEnable;
     [SerializeField]
     CutsceneLoaderContainer data;
+    public enum SceneType { BeginLevel, EndLevel }
+    public SceneType type;
 
     private void Awake()
     {
+        //if(type == SceneType.BeginLevel)
         data = Resources.Load<CutsceneLoaderContainer>("CutsceneLoaderData");
+        //else
+        //data = Resources.Load<CutsceneLoaderContainer>("EndData");
+
 
         GetComponent<Button>().onClick.AddListener(SetCutsceneData);
     }
     private void Update()
     {
-        
+        if (Input.GetButtonDown("PRETO0"))
+        {
+            GetComponent<Button>().onClick.Invoke();
+        }
     }
-    public void SetCutsceneData()
-    {
+    public void SetCutsceneData() { 
+    
+        if(type == SceneType.BeginLevel){
         PlayerPrefs.SetInt("LevelSelected", levelToEnable);
         PlayerPrefs.SetString("LevelAfinity", levelAfinity);
+        }
         data.SetTitle(titleName);
         data.SetSceneName(sceneToload);
         data.SetCutsceneToLoadName(cutsceneToLoadName);
@@ -36,9 +47,8 @@ public class CussceneLoader : MonoBehaviour
 
         SceneManager.LoadScene("CutsceneLoader");
 
-        if(titleName == "Intro")
-        {
-            PlayerPrefs.SetInt("levels", 1);
-        }
+        
     }
+
+    public void SetInt() { PlayerPrefs.SetInt("LevelSelectionScreen", 1); }
 }
