@@ -29,7 +29,7 @@ public class NoteBehavior : MonoBehaviour
     }
     public void StartBehavior()
     {
-        StartCoroutine(Reset());
+        //StartCoroutine(Reset());
     }
 
     public void Stop()
