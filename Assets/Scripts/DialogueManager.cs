@@ -128,7 +128,7 @@ public class DialogueManager : MonoBehaviour
             {
                 if (dialogueData.GetChoiceChoosed(index, true))
                     SetText(index, choiceRootDialogue, rootIndex, true);
-                else if (dialogueData.GetChoiceChoosed(index, false))
+                else if (!dialogueData.GetChoiceChoosed(index, false))
                     SetText(index, choiceRootDialogue, rootIndex, false);
                 else
                     SetText(index, choiceRootDialogue, rootIndex, _goodOrBadRoot);

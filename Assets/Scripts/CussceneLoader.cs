@@ -14,6 +14,8 @@ public class CussceneLoader : MonoBehaviour
     int levelToEnable;
     [SerializeField]
     CutsceneLoaderContainer data;
+    [SerializeField]
+    AudioClip clip;
     public enum SceneType { BeginLevel, EndLevel }
     public SceneType type;
 
@@ -44,7 +46,7 @@ public class CussceneLoader : MonoBehaviour
         data.SetSceneName(sceneToload);
         data.SetCutsceneToLoadName(cutsceneToLoadName);
         data.SetAfinityToLoadName(afinityToloadName);
-
+        data.SetMusic(clip);
         SceneManager.LoadScene("CutsceneLoader");
 
         

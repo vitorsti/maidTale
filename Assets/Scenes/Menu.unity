@@ -339,8 +339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 500}
+  m_AnchoredPosition: {x: -0.000015258789, y: -0.000030517578}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &52205902
 MonoBehaviour:
@@ -607,12 +607,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1401356229}
-  m_Father: {fileID: 377707638}
-  m_RootOrder: 1
+  m_Father: {fileID: 1923086783}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 286.7001, y: -300}
+  m_AnchoredPosition: {x: 874.41064, y: -592.8567}
   m_SizeDelta: {x: 157.8, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220916573
@@ -634,6 +634,7 @@ MonoBehaviour:
   levelAfinity: PlaceHolder
   levelToEnable: 2
   data: {fileID: 0}
+  clip: {fileID: 8300000, guid: f26eb141dccabad4aa666327afdc75e8, type: 3}
   type: 0
 --- !u!114 &220916574
 MonoBehaviour:
@@ -1244,6 +1245,7 @@ MonoBehaviour:
   levelAfinity: PlaceHolder
   levelToEnable: 0
   data: {fileID: 0}
+  clip: {fileID: 8300000, guid: f26eb141dccabad4aa666327afdc75e8, type: 3}
   type: 0
 --- !u!1 &377707637
 GameObject:
@@ -1278,7 +1280,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 381461594}
-  - {fileID: 220916572}
   m_Father: {fileID: 1923086783}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1306,6 +1307,7 @@ MonoBehaviour:
   levelAfinity: Alfred
   levelToEnable: 1
   data: {fileID: 0}
+  clip: {fileID: 8300000, guid: f26eb141dccabad4aa666327afdc75e8, type: 3}
   type: 0
 --- !u!114 &377707640
 MonoBehaviour:
@@ -1436,8 +1438,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 500}
+  m_AnchoredPosition: {x: 0.000061035156, y: -0.000030517578}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &381461595
 MonoBehaviour:
@@ -2030,7 +2032,7 @@ RectTransform:
   m_Children:
   - {fileID: 210957301}
   m_Father: {fileID: 1923086783}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2056,6 +2058,7 @@ MonoBehaviour:
   levelAfinity: PlaceHolder
   levelToEnable: 3
   data: {fileID: 0}
+  clip: {fileID: 8300000, guid: f26eb141dccabad4aa666327afdc75e8, type: 3}
   type: 0
 --- !u!114 &831927617
 MonoBehaviour:
@@ -2406,8 +2409,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 500}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_SizeDelta: {x: -0.0001, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004242911
 MonoBehaviour:
@@ -2795,6 +2798,7 @@ MonoBehaviour:
   levelAfinity: PlaceHolder
   levelToEnable: 0
   data: {fileID: 0}
+  clip: {fileID: 8300000, guid: effeb268a6c789849b0db17f67eaaabc, type: 3}
   type: 0
 --- !u!1 &1220825155
 GameObject:
@@ -3445,7 +3449,7 @@ RectTransform:
   m_Children:
   - {fileID: 331663247}
   m_Father: {fileID: 1923086783}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3471,6 +3475,7 @@ MonoBehaviour:
   levelAfinity: PlaceHolder
   levelToEnable: 6
   data: {fileID: 0}
+  clip: {fileID: 8300000, guid: f26eb141dccabad4aa666327afdc75e8, type: 3}
   type: 0
 --- !u!114 &1338840869
 MonoBehaviour:
@@ -3870,7 +3875,7 @@ RectTransform:
   m_Children:
   - {fileID: 578727864}
   m_Father: {fileID: 1923086783}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3945,6 +3950,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1923086788}
+        m_TargetAssemblyTypeName: LevelSelectionManager, Assembly-CSharp
+        m_MethodName: SetStayOpen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4238,11 +4255,11 @@ MonoBehaviour:
 
     <b><u>Scenary Final Art Director:</u></b>
 
-    <i>Danilo</i>
+    <i>Jeanine</i>
 
 
     <b><u>Script
-    & Plot Director:</u></b>
+    & Plot Director & Audio Director:</u></b>
 
     <i>Guilherme</i>'
   m_isRightToLeft: 0
@@ -4355,7 +4372,7 @@ RectTransform:
   m_Children:
   - {fileID: 1241849575}
   m_Father: {fileID: 1923086783}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4381,6 +4398,7 @@ MonoBehaviour:
   levelAfinity: PlaceHolder
   levelToEnable: 4
   data: {fileID: 0}
+  clip: {fileID: 8300000, guid: f26eb141dccabad4aa666327afdc75e8, type: 3}
   type: 0
 --- !u!114 &1842771078
 MonoBehaviour:
@@ -4512,6 +4530,7 @@ RectTransform:
   - {fileID: 1210190026}
   - {fileID: 352000333}
   - {fileID: 377707638}
+  - {fileID: 220916572}
   - {fileID: 831927615}
   - {fileID: 1842771076}
   - {fileID: 2143833639}
@@ -4811,7 +4830,7 @@ RectTransform:
   m_Children:
   - {fileID: 350142307}
   m_Father: {fileID: 1923086783}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4837,6 +4856,7 @@ MonoBehaviour:
   levelAfinity: PlaceHolder
   levelToEnable: 5
   data: {fileID: 0}
+  clip: {fileID: 8300000, guid: f26eb141dccabad4aa666327afdc75e8, type: 3}
   type: 0
 --- !u!114 &2143833641
 MonoBehaviour:

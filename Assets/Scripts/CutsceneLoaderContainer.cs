@@ -7,6 +7,8 @@ public class CutsceneLoaderContainer : ScriptableObject
 {
     [SerializeField]
     string title, sceneToLoad;
+    [SerializeField]
+    AudioClip music;
     public void SetCutsceneToLoadName(string value)
     {
         PlayerPrefs.SetString("CutsceneToLoad", value);
@@ -46,5 +48,15 @@ public class CutsceneLoaderContainer : ScriptableObject
     public string GetSceneToLoad()
     {
         return sceneToLoad;
+    }
+
+    public AudioClip GetClip()
+    {
+        return music;
+    }
+
+    public void SetMusic(AudioClip c)
+    {
+        music = c;
     }
 }

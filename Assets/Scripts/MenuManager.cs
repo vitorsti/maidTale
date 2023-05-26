@@ -70,6 +70,7 @@ public class MenuManager : MonoBehaviour
     }
     public void QuitGame()
     {
+        PlayerPrefs.SetInt("LevelSelectionScreen", 0);
 #if UNITY_EDITOR
         Debug.Log("Quit");
 #endif
