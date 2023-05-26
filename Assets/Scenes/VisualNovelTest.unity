@@ -892,8 +892,9 @@ MonoBehaviour:
   buttonMenu: {fileID: 0}
   buttonMenu2: {fileID: 0}
   buttonDayEnd: {fileID: 0}
-  sceneToLoad: 
+  levels: []
   _state: 0
+  sceneToLoad: 
 --- !u!4 &810237374
 Transform:
   m_ObjectHideFlags: 0
@@ -924,6 +925,7 @@ MonoBehaviour:
   tasksToComplete: []
   tasksQuantity: 0
   afinityToLoad: 
+  afinityData: {fileID: 0}
   dayCompleted: {fileID: 0}
 --- !u!1 &1070982017
 GameObject:
@@ -1681,7 +1683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8233764431863053489, guid: a62b762a492bfdd4e8e490957ed2c2e0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8233764431863053501, guid: a62b762a492bfdd4e8e490957ed2c2e0, type: 3}
       propertyPath: m_Pivot.x
@@ -1765,6 +1767,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8233764431863053501, guid: a62b762a492bfdd4e8e490957ed2c2e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233764431915043921, guid: a62b762a492bfdd4e8e490957ed2c2e0, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

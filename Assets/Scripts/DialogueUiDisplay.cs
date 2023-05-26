@@ -22,6 +22,8 @@ public class DialogueUiDisplay : MonoBehaviour
     [SerializeField]
     private Image expressionCharacterLeft, expressionCharacterRight;
     [SerializeField]
+    private Image backGroundImage;
+    [SerializeField]
     private GameObject choicebuttons;
     [SerializeField]
     private Button goodChoiceButton, badChoiceButton;
@@ -116,7 +118,7 @@ public class DialogueUiDisplay : MonoBehaviour
             //SetExpression();
             SetColor();
             SetText(dialogueManager.GetText());
-
+            SetBackgroundImage();
             nextButton.onClick.RemoveAllListeners();
             previousButton.onClick.RemoveAllListeners();
             goodChoiceButton.onClick.RemoveAllListeners();
@@ -187,6 +189,19 @@ public class DialogueUiDisplay : MonoBehaviour
 
 
     }
+    void SetBackgroundImage()
+    {
+        if (dialogueManager.isThisDialogueACutScene())
+        {
+            if (backGroundImage != null)
+            {
+                backGroundImage.gameObject.SetActive(true);
+                backGroundImage.sprite = dialogueManager.GetBackground();
+            }
+        }
+        else
+            backGroundImage.gameObject.SetActive(false);
+    }
     void SetCharacterImage()
     {
         if (characterLeft != null)
@@ -223,6 +238,7 @@ public class DialogueUiDisplay : MonoBehaviour
         SetCharacterImage();
         SetExpression();
         SetCharacterImage();
+        SetBackgroundImage();
         SetColor();
         SetText(dialogueManager.GetText());
         StartCoroutine(DisplayText());
@@ -239,6 +255,7 @@ public class DialogueUiDisplay : MonoBehaviour
         SetCharacterImage();
         SetExpression();
         SetCharacterImage();
+        SetBackgroundImage();
         SetColor();
         SetText(dialogueManager.GetText());
         StartCoroutine(DisplayText());

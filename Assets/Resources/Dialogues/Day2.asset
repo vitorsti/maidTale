@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ch1: {fileID: 0}
   ch2: {fileID: 0}
-  isThisDialogueaCutScene: 0
+  isThisDialogueaCutScene: 1
   dialogueEnded: 0
   textEnded: 
   data:
@@ -31,7 +31,8 @@ MonoBehaviour:
     c1: {r: 1, g: 1, b: 1, a: 1}
     c2: {r: 0, g: 0, b: 0, a: 0}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 27a879817c1fbb4458dff7a0ae5f36c6, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -48,7 +49,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 0, g: 0, b: 0, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 27a879817c1fbb4458dff7a0ae5f36c6, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -65,7 +67,8 @@ MonoBehaviour:
     c1: {r: 1, g: 1, b: 1, a: 1}
     c2: {r: 0, g: 0, b: 0, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 27a879817c1fbb4458dff7a0ae5f36c6, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -83,7 +86,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 0, g: 0, b: 0, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 27a879817c1fbb4458dff7a0ae5f36c6, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -100,7 +104,8 @@ MonoBehaviour:
     c1: {r: 1, g: 1, b: 1, a: 1}
     c2: {r: 0, g: 0, b: 0, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 27a879817c1fbb4458dff7a0ae5f36c6, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -118,7 +123,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 0, g: 0, b: 0, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 27a879817c1fbb4458dff7a0ae5f36c6, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -137,7 +143,8 @@ MonoBehaviour:
     c1: {r: 1, g: 1, b: 1, a: 1}
     c2: {r: 0, g: 0, b: 0, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 27a879817c1fbb4458dff7a0ae5f36c6, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -156,7 +163,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 0, g: 0, b: 0, a: 0}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -173,7 +181,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -191,7 +200,8 @@ MonoBehaviour:
     c1: {r: 1, g: 1, b: 1, a: 1}
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -210,7 +220,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -230,7 +241,8 @@ MonoBehaviour:
     c1: {r: 1, g: 1, b: 1, a: 1}
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -250,7 +262,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -268,7 +281,8 @@ MonoBehaviour:
     c1: {r: 1, g: 1, b: 1, a: 1}
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -288,7 +302,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -305,7 +320,8 @@ MonoBehaviour:
     c1: {r: 1, g: 1, b: 1, a: 1}
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -322,7 +338,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -339,7 +356,8 @@ MonoBehaviour:
     c1: {r: 1, g: 1, b: 1, a: 1}
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -357,7 +375,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -375,7 +394,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -436,7 +456,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 1, g: 1, b: 1, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
@@ -453,7 +474,8 @@ MonoBehaviour:
     c1: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     c2: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     e1: {fileID: 21300000, guid: 2a85f428d79236247afe6fe046fe8514, type: 3}
-    e2: {fileID: 21300000, guid: 35b37e920742fde45a1d7fd39ad87236, type: 3}
+    e2: {fileID: 21300000, guid: 1dd1c6c281f197c4bad20163b5368cf3, type: 3}
+    backGroundImage: {fileID: 21300000, guid: a8e654d78d35ce148ba9b52d4575f07d, type: 3}
     choiced: 0
     badChoiceChoosed: 0
     goodChoiceChoosed: 0

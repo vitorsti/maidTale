@@ -38,7 +38,7 @@ public class NoteBehavior : MonoBehaviour
     }
     IEnumerator Reset()
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(20f);
         RythemMiniGameManager.instance.ResetNote(this.gameObject);
         //DestroyImmediate(this.gameObject);
     }

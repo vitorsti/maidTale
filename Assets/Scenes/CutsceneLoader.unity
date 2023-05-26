@@ -1362,10 +1362,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonMenu: {fileID: 632395982}
-  buttonMenu2: {fileID: 0}
+  buttonMenu2: {fileID: 1319817126}
   buttonDayEnd: {fileID: 0}
-  sceneToLoad: Menu
+  levels: []
   _state: 0
+  sceneToLoad: Menu
 --- !u!4 &1586813709
 Transform:
   m_ObjectHideFlags: 0
@@ -1399,6 +1400,7 @@ MonoBehaviour:
   endButton: {fileID: 1319817128}
   title: {fileID: 676671560}
   endCutsceneScreen: {fileID: 456181191}
+  sceneLoaderScene: 0
 --- !u!114 &1586813711
 MonoBehaviour:
   m_ObjectHideFlags: 0

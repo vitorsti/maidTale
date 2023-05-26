@@ -20,6 +20,9 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField]
     GameObject endCutsceneScreen;
     string sceneToLoad;
+    [SerializeField]
+    bool sceneLoaderScene;
+    
     private void OnValidate()
     {
         if (beginCutscene)
@@ -31,12 +34,13 @@ public class CutsceneManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        data = Resources.Load<CutsceneLoaderContainer>("CutsceneLoaderData");
+            data = Resources.Load<CutsceneLoaderContainer>("CutsceneLoaderData");
     }
 
     private void Update()
     {
-        if (Input.GetButtonDown("VERDE0") )
+       
+        if (Input.GetButtonDown("VERDE0") && sceneLoaderScene )
         {
             buttonMenu.GetComponent<Button>().onClick.Invoke();
         }
