@@ -513,10 +513,10 @@ RectTransform:
   m_Father: {fileID: 1923086783}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 841.3085, y: -539.85455}
-  m_SizeDelta: {x: 157.8, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220916573
 MonoBehaviour:
@@ -534,6 +534,8 @@ MonoBehaviour:
   cutsceneToLoadName: Day1
   afinityToloadName: Augustus
   sceneToload: Game
+  levelAfinity: PlaceHolder
+  levelToEnable: 2
   data: {fileID: 0}
 --- !u!114 &220916574
 MonoBehaviour:
@@ -574,7 +576,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 220916575}
   m_OnClick:
     m_PersistentCalls:
@@ -1026,10 +1028,10 @@ RectTransform:
   m_Father: {fileID: 1923086783}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 365.50842, y: -539.85455}
-  m_SizeDelta: {x: 157.8, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &352000334
 MonoBehaviour:
@@ -1129,6 +1131,8 @@ MonoBehaviour:
   cutsceneToLoadName: Day1
   afinityToloadName: Augustus
   sceneToload: Game
+  levelAfinity: PlaceHolder
+  levelToEnable: 0
   data: {fileID: 0}
 --- !u!1 &377707637
 GameObject:
@@ -1166,10 +1170,10 @@ RectTransform:
   m_Father: {fileID: 1923086783}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 603.40845, y: -539.85455}
-  m_SizeDelta: {x: 157.8, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377707639
 MonoBehaviour:
@@ -1183,10 +1187,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d127e95d7b29714d8cf1c3cc43aefa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleName: Dia 1
-  cutsceneToLoadName: Day1
+  titleName: Dia 2
+  cutsceneToLoadName: Day2
   afinityToloadName: Augustus
   sceneToload: Game
+  levelAfinity: Alfred
+  levelToEnable: 1
   data: {fileID: 0}
 --- !u!114 &377707640
 MonoBehaviour:
@@ -1713,6 +1719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a651dc800741548986aa5e82e5a2bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelSelectionScreen: {fileID: 1923086782}
+  creditScreen: {fileID: 936461699}
 --- !u!4 &692573946
 Transform:
   m_ObjectHideFlags: 0
@@ -1899,10 +1907,10 @@ RectTransform:
   m_Father: {fileID: 1923086783}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1079.2085, y: -539.85455}
-  m_SizeDelta: {x: 157.8, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &831927616
 MonoBehaviour:
@@ -1920,6 +1928,8 @@ MonoBehaviour:
   cutsceneToLoadName: Day1
   afinityToloadName: Augustus
   sceneToload: Game
+  levelAfinity: PlaceHolder
+  levelToEnable: 3
   data: {fileID: 0}
 --- !u!114 &831927617
 MonoBehaviour:
@@ -1960,7 +1970,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 831927618}
   m_OnClick:
     m_PersistentCalls:
@@ -2453,10 +2463,10 @@ RectTransform:
   m_Father: {fileID: 1923086783}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 127.60844, y: -539.85455}
-  m_SizeDelta: {x: 157.8, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210190027
 MonoBehaviour:
@@ -2556,6 +2566,8 @@ MonoBehaviour:
   cutsceneToLoadName: Intro
   afinityToloadName: Augustus
   sceneToload: Menu
+  levelAfinity: PlaceHolder
+  levelToEnable: 0
   data: {fileID: 0}
 --- !u!1 &1220825155
 GameObject:
@@ -3208,10 +3220,10 @@ RectTransform:
   m_Father: {fileID: 1923086783}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1792.9084, y: -539.85455}
-  m_SizeDelta: {x: 157.8, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338840868
 MonoBehaviour:
@@ -3229,6 +3241,8 @@ MonoBehaviour:
   cutsceneToLoadName: Day1
   afinityToloadName: Augustus
   sceneToload: Game
+  levelAfinity: PlaceHolder
+  levelToEnable: 6
   data: {fileID: 0}
 --- !u!114 &1338840869
 MonoBehaviour:
@@ -3269,7 +3283,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1338840870}
   m_OnClick:
     m_PersistentCalls:
@@ -3956,12 +3970,18 @@ MonoBehaviour:
 
 
     <b><u>Scenary
-    Art Drector:</u></b>
+    Art Director:</u></b>
 
     <i>Danilo</i>
 
 
-    <b><u>Script & Plot Director:</u></b>
+    <b><u>Scenary Final Art Director:</u></b>
+
+    <i>Danilo</i>
+
+
+    <b><u>Script
+    & Plot Director:</u></b>
 
     <i>Guilherme</i>'
   m_isRightToLeft: 0
@@ -3990,14 +4010,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45.36
-  m_fontSizeBase: 45.36
+  m_fontSize: 35.18
+  m_fontSizeBase: 35.18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4076,10 +4096,10 @@ RectTransform:
   m_Father: {fileID: 1923086783}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1317.1085, y: -539.85455}
-  m_SizeDelta: {x: 157.8, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842771077
 MonoBehaviour:
@@ -4097,6 +4117,8 @@ MonoBehaviour:
   cutsceneToLoadName: Day1
   afinityToloadName: Augustus
   sceneToload: Game
+  levelAfinity: PlaceHolder
+  levelToEnable: 4
   data: {fileID: 0}
 --- !u!114 &1842771078
 MonoBehaviour:
@@ -4137,7 +4159,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1842771079}
   m_OnClick:
     m_PersistentCalls:
@@ -4198,7 +4220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1923086783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4499,10 +4521,10 @@ RectTransform:
   m_Father: {fileID: 1923086783}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1555.0084, y: -539.85455}
-  m_SizeDelta: {x: 157.8, y: 600}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143833640
 MonoBehaviour:
@@ -4520,6 +4542,8 @@ MonoBehaviour:
   cutsceneToLoadName: Day1
   afinityToloadName: Augustus
   sceneToload: Game
+  levelAfinity: PlaceHolder
+  levelToEnable: 5
   data: {fileID: 0}
 --- !u!114 &2143833641
 MonoBehaviour:
@@ -4560,7 +4584,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2143833642}
   m_OnClick:
     m_PersistentCalls:

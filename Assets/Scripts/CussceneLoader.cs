@@ -9,6 +9,10 @@ public class CussceneLoader : MonoBehaviour
     [SerializeField]
     string titleName, cutsceneToLoadName, afinityToloadName, sceneToload;
     [SerializeField]
+    string levelAfinity;
+    [SerializeField]
+    int levelToEnable;
+    [SerializeField]
     CutsceneLoaderContainer data;
 
     private void Awake()
@@ -23,6 +27,8 @@ public class CussceneLoader : MonoBehaviour
     }
     public void SetCutsceneData()
     {
+        PlayerPrefs.SetInt("LevelSelected", levelToEnable);
+        PlayerPrefs.SetString("LevelAfinity", levelAfinity);
         data.SetTitle(titleName);
         data.SetSceneName(sceneToload);
         data.SetCutsceneToLoadName(cutsceneToLoadName);

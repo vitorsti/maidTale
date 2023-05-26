@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instace;
     public GameObject buttonMenu;
     public GameObject buttonMenu2;
-    public GameObject buttonDayEnd; 
+    public GameObject buttonDayEnd;
+    public GameObject[] levels;
     public enum GameState { none,pause, play, interaction, cutscene}
     public GameState _state;
     [SerializeField]
@@ -29,14 +30,17 @@ public class GameManager : MonoBehaviour
         instace = this;
        
         _state = GameState.play;
+
+        //PlayerPrefs.SetInt("LevelSelected", 1);
+        
     }
 
     private void Start()
     {
         if(SceneManager.GetActiveScene().name == "Game")
-        { 
-            
-            TimerManager.instance.StartTimer();
+        {
+
+            BeginLevel();
 
         }
     }
@@ -75,7 +79,21 @@ public class GameManager : MonoBehaviour
     }*/
     public void BeginLevel()
     {
+     
+        int index = PlayerPrefs.GetInt("LevelSelected", 0);
+
+        foreach(GameObject i in levels)
+        {
+            i.SetActive(false);
+        }
+
+        levels[index].SetActive(true);
+
+        TaskManager.instance.SetThings();
+
         TimerManager.instance.StartTimer();
+
+        
     }
     public void SetState(GameState state)
     {

@@ -11,11 +11,42 @@ public class TaskManager : MonoBehaviour
     private int tasksQuantity;
     [SerializeField]
     private string afinityToLoad;
+    [SerializeField]
     AfinityContainer afinityData;
     public GameObject dayCompleted;
     private void Awake()
     {
         instance = this;
+#if UNITY_EDITOR
+        //PlayerPrefs.SetString("LevelAfinity", "Augustus");
+#endif
+        afinityToLoad = PlayerPrefs.GetString("LevelAfinity", "");
+        Debug.Log(afinityToLoad);
+       /* var afinity = Resources.Load<AfinityContainer>("Afinities/" + afinityToLoad);
+
+        if (afinity != null)
+        {
+            afinityData = afinity;
+        }*/
+
+        //if (tasksToComplete == null)
+        
+        
+    }
+
+    private void Start()
+    {
+        
+
+       
+    }
+
+    public void SetThings()
+    {
+        StartCoroutine(Set());
+    }
+    IEnumerator Set()
+    {
         var afinity = Resources.Load<AfinityContainer>("Afinities/" + afinityToLoad);
 
         if (afinity != null)
@@ -23,16 +54,11 @@ public class TaskManager : MonoBehaviour
             afinityData = afinity;
         }
 
-        //if (tasksToComplete == null)
         tasksToComplete = GameObject.FindGameObjectsWithTag("Task");
-
-    }
-
-    private void Start()
-    {
+        yield return new WaitForSeconds(0.2f); 
         tasksQuantity = tasksToComplete.Length;
+        yield return null;
     }
-
     public void RemoveTask()
     {
         if (tasksQuantity > 0)
