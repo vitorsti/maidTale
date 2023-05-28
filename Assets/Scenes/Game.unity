@@ -871,6 +871,7 @@ MonoBehaviour:
   levelAfinity: 
   levelToEnable: 0
   data: {fileID: 0}
+  clip: {fileID: 0}
   type: 1
 --- !u!114 &221180711
 MonoBehaviour:
@@ -1377,7 +1378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &375076719
 Transform:
   m_ObjectHideFlags: 0
@@ -4472,6 +4473,7 @@ MonoBehaviour:
   levelAfinity: 
   levelToEnable: 0
   data: {fileID: 0}
+  clip: {fileID: 0}
   type: 1
 --- !u!114 &904858106
 MonoBehaviour:
@@ -7577,6 +7579,7 @@ MonoBehaviour:
   levelAfinity: 
   levelToEnable: 0
   data: {fileID: 0}
+  clip: {fileID: 0}
   type: 1
 --- !u!114 &1369859617
 MonoBehaviour:
@@ -8500,6 +8503,7 @@ MonoBehaviour:
   levelAfinity: 
   levelToEnable: 0
   data: {fileID: 0}
+  clip: {fileID: 0}
   type: 1
 --- !u!114 &1549887993
 MonoBehaviour:
@@ -9502,6 +9506,7 @@ MonoBehaviour:
   levelAfinity: 
   levelToEnable: 0
   data: {fileID: 0}
+  clip: {fileID: 0}
   type: 1
 --- !u!114 &1803059417
 MonoBehaviour:
