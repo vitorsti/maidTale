@@ -93,7 +93,7 @@ public class DialogueManager : MonoBehaviour
 #if !UNITY_EDITOR
           //  dialogueData.SetDialogueEnd(true);
 #else
-                Debug.Log("dialogu ended");
+               // Debug.Log("dialogu ended");
 #endif
             }
             if (index > length)
@@ -126,13 +126,30 @@ public class DialogueManager : MonoBehaviour
 
             if (choiceRootDialogue)
             {
-                if (dialogueData.GetChoiceChoosed(index, true))
+                /*if (dialogueData.GetChoiceChoosed(index, true))
                     SetText(index, choiceRootDialogue, rootIndex, true);
-                else if (dialogueData.GetChoiceChoosed(index, false))
-                    SetText(index, choiceRootDialogue, rootIndex, false);
                 else
                     SetText(index, choiceRootDialogue, rootIndex, _goodOrBadRoot);
-                rootIndex++;
+                if (dialogueData.GetChoiceChoosed(index, false))
+                    SetText(index, choiceRootDialogue, rootIndex, false);
+                else
+                   SetText(index, choiceRootDialogue, rootIndex, _goodOrBadRoot);*/
+                //if (!GetChoiced())
+                //{
+                    if (dialogueData.GetChoiceChoosed(index, true))
+                        SetText(index, choiceRootDialogue, rootIndex, true);
+                    if (dialogueData.GetChoiceChoosed(index, false))
+                        SetText(index, choiceRootDialogue, rootIndex, false);
+                    rootIndex++;
+                //}
+                //else
+                //{
+                  //  if (dialogueData.GetChoiceChoosed(index, true))
+                       // SetText(index, choiceRootDialogue, rootIndex, true);
+                   // if (dialogueData.GetChoiceChoosed(index, false))
+                   //     SetText(index, choiceRootDialogue, rootIndex, false);
+                   // rootIndex++;
+                //}
             }
 
         }
@@ -205,8 +222,11 @@ public class DialogueManager : MonoBehaviour
 
             if (choiceRootDialogue)
             {
-                SetText(index, choiceRootDialogue, rootIndex, _goodOrBadRoot);
-                //rootIndex--;
+                if (dialogueData.GetChoiceChoosed(index, true))
+                    SetText(index, choiceRootDialogue, rootIndex, true);
+                if (dialogueData.GetChoiceChoosed(index, false))
+                    SetText(index, choiceRootDialogue, rootIndex, false);
+                rootIndex--;
             }
 
         }
@@ -292,34 +312,34 @@ public class DialogueManager : MonoBehaviour
     }
     public void AddAfinity()
     {
-#if UNITY_EDITOR
-        Debug.Log("AfinityAdded");
-        afinityData.IncreaseAfinity(dialogueData.GetAfinityToAdd(index));
-        return;
-#else
-        if (!dialogueData.GetChoiced(index))
-        {
-            dialogueData.SetChoiced(index, true);
+//#if UNITY_EDITOR
+  //      Debug.Log("AfinityAdded");
+    //    afinityData.IncreaseAfinity(dialogueData.GetAfinityToAdd(index));
+      //  return;
+//#else
+        //if (!dialogueData.GetChoiced(index))
+        //{
+            //dialogueData.SetChoiced(index, true);
             afinityData.IncreaseAfinity(dialogueData.GetAfinityToAdd(index));
-            Debug.Log("AfinityIncreased");
-        }
-#endif
+          //  Debug.Log("AfinityIncreased");
+        //}
+//#endif
 
     }
     public void RemoveAfinity()
     {
-#if UNITY_EDITOR
-        Debug.Log("AfinityRemoved");
-        afinityData.DecreaseAfinity(dialogueData.GetAfinityToRemove(index));
-        return;
-#else
-        if (!dialogueData.GetChoiced(index))
-        {
-            dialogueData.SetChoiced(index, true);
+//#if UNITY_EDITOR
+  //      Debug.Log("AfinityRemoved");
+    //    afinityData.DecreaseAfinity(dialogueData.GetAfinityToRemove(index));
+      //  return;
+//#else
+        //if (!dialogueData.GetChoiced(index))
+        //{
+            //dialogueData.SetChoiced(index, true);
             afinityData.DecreaseAfinity(dialogueData.GetAfinityToRemove(index));
             Debug.Log("AfinityDecreased");
-        }
-#endif
+        //}
+//#endif
     }
 
     public void SetChoiceRoot(bool value, bool bOrG)
@@ -328,6 +348,7 @@ public class DialogueManager : MonoBehaviour
         {
             choiceRootDialogue = true;
             _goodOrBadRoot = value;
+            Debug.Log(_goodOrBadRoot);
             rootIndex = 0;
             rootLength = dialogueData.GetRootlength(index, _goodOrBadRoot);
             if (bOrG)
@@ -335,6 +356,7 @@ public class DialogueManager : MonoBehaviour
             else
                 dialogueData.SetBadChoiced(index, true);
 
+            dialogueData.SetChoiced(index, true);
         }
         else
         {

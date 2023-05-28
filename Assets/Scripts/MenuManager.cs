@@ -75,4 +75,9 @@ public class MenuManager : MonoBehaviour
 #endif
         Application.Quit();
     }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("LevelSelectionScreen", 0);
+    }
 }

@@ -126,10 +126,10 @@ public class DialogueUiDisplay : MonoBehaviour
 
             nextButton.onClick.AddListener(NextButton);
             previousButton.onClick.AddListener(PreviousButton);
-            goodChoiceButton.onClick.AddListener(AddAfinity);
-            goodChoiceButton.onClick.AddListener(NextButton);
-            badChoiceButton.onClick.AddListener(RemoveAfinity);
-            badChoiceButton.onClick.AddListener(NextButton);
+            goodChoiceButton.onClick.AddListener(GoodChoice);
+           // goodChoiceButton.onClick.AddListener(NextButton);
+            badChoiceButton.onClick.AddListener(BadChoice);
+           // badChoiceButton.onClick.AddListener(NextButton);
 
             nextButton.gameObject.SetActive(true);
             previousButton.gameObject.SetActive(true);
@@ -230,8 +230,8 @@ public class DialogueUiDisplay : MonoBehaviour
         {
             
         }*/
-       
-        dialogueManager.NextText(); 
+
+        dialogueManager.NextText();
         SetCharacterName();
         ChoiceOption();
         StopAllCoroutines();
@@ -247,7 +247,7 @@ public class DialogueUiDisplay : MonoBehaviour
 
     void PreviousButton()
     {
-        
+
         dialogueManager.PreviousText();
         SetCharacterName();
         ChoiceOption();
@@ -327,7 +327,7 @@ public class DialogueUiDisplay : MonoBehaviour
         }*/
     }
 
-    
+
     IEnumerator DisplayText()
     {
         int index = 0;
@@ -339,6 +339,18 @@ public class DialogueUiDisplay : MonoBehaviour
             yield return new WaitForSeconds(displayTextDelay);
         }
         yield return null;
+    }
+
+    void BadChoice()
+    {
+        RemoveAfinity();
+        NextButton();
+    }
+
+    void GoodChoice()
+    {
+        AddAfinity();
+        NextButton();
     }
 }
 

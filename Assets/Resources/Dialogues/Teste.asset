@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 772bece35e9a9d24bb434283e25cb1ad, type: 3}
-  m_Name: Dialogue3
+  m_Name: Teste
   m_EditorClassIdentifier: 
   ch1: {fileID: 0}
   ch2: {fileID: 0}
@@ -19,10 +19,8 @@ MonoBehaviour:
   textEnded: 
   data:
   - id: 0
-    characterName: 
-    text: "Todas estas quest\xF5es, devidamente ponderadas, levantam d\xFAvidas sobre
-      se a competitividade nas transa\xE7\xF5es comerciais n\xE3o pode mais se dissociar
-      dos conhecimentos estrat\xE9gicos para atingir a excel\xEAncia."
+    characterName: teste
+    text: o proximo dialogo vai ter uma escolha
     hasChoice: 0
     goodChoice: 
     badChoice: 
@@ -40,14 +38,27 @@ MonoBehaviour:
     goodChoiceChoosed: 0
   - id: 1
     characterName: 
-    text: "No entanto, n\xE3o podemos esquecer que a execu\xE7\xE3o dos pontos do
-      programa desafia a capacidade de equaliza\xE7\xE3o do processo de comunica\xE7\xE3o
-      como um todo."
-    hasChoice: 0
-    goodChoice: 
-    badChoice: 
-    goodChoiceRoot: []
-    badChoiceRoot: []
+    text: 'escolha entre bom ou ruim:'
+    hasChoice: 1
+    goodChoice: Escolha boa
+    badChoice: Escolha ruim
+    goodChoiceRoot:
+    - text: escolha boa 1
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
+    - text: escolha boa 2
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
+    badChoiceRoot:
+    - text: escolha ruim 1
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
+    - text: escolha ruim 2
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
+    - text: escolha ruim 3
+      c1: {r: 0, g: 0, b: 0, a: 0}
+      c2: {r: 0, g: 0, b: 0, a: 0}
     afinityToAdd: 0
     afinityToRemove: 0
     c1: {r: 0, g: 0, b: 0, a: 0}
@@ -60,11 +71,10 @@ MonoBehaviour:
     goodChoiceChoosed: 0
   - id: 2
     characterName: 
-    text: "No mundo atual, a mobilidade dos capitais internacionais obstaculiza a
-      aprecia\xE7\xE3o da import\xE2ncia do retorno esperado a longo prazo."
+    text: Fim das escolhas
     hasChoice: 0
-    goodChoice: 
-    badChoice: 
+    goodChoice: Escolha boa
+    badChoice: Escolha ruim
     goodChoiceRoot: []
     badChoiceRoot: []
     afinityToAdd: 0

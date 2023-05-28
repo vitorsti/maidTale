@@ -68,7 +68,11 @@ public class TaskManager : MonoBehaviour
             if (tasksQuantity <= 0)
             {
                 tasksQuantity = 0;
-                dayCompleted.SetActive(true);
+                //dayCompleted.SetActive(true);
+                GameObject end;
+                end = GameObject.Find("EndDayButton");
+                if(end!=null)
+                end.GetComponent<UnityEngine.UI.Button>().onClick.Invoke();
                 GameManager.instace.SetState(GameManager.GameState.cutscene);
             }
         }

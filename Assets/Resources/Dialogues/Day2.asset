@@ -480,3 +480,4 @@ MonoBehaviour:
     badChoiceChoosed: 0
     goodChoiceChoosed: 0
   removeH: 0
+  reset: 0

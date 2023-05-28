@@ -25,7 +25,8 @@ public class DialogueContainer : ScriptableObject
     [Header("----DEBUG-----")]
     [SerializeField]
     private bool removeH;
-    
+    [SerializeField]
+    private bool reset;
     private void OnValidate()
     {
         if (removeH)
@@ -39,6 +40,17 @@ public class DialogueContainer : ScriptableObject
             data[i].id = i;
             //data[i].c1.a = 1;
             //data[i].c2.a = 1;
+        }
+
+        if (reset)
+        {
+            for (int i = 0; i < data.Length; i++)
+            {
+                data[i].choiced = false;
+                data[i].goodChoiceChoosed = false;
+                data[i].badChoiceChoosed = false;
+            }
+            reset = false;
         }
     }
     public Sprite GetBakgroundImage(int id)
@@ -55,8 +67,8 @@ public class DialogueContainer : ScriptableObject
     }
     public string GetRootText(int id, int choiceRootId, bool goodOrBad)
     {
-        Debug.Log(id);
-        Debug.Log(choiceRootId);
+        //Debug.Log(id);
+        //Debug.Log(choiceRootId);
         if (goodOrBad)
         {
             //Debug.Log(choiceRootId);
