@@ -22,6 +22,10 @@ public class CutsceneManager : MonoBehaviour
     string sceneToLoad;
     [SerializeField]
     bool sceneLoaderScene;
+    [SerializeField]
+    AudioClip clip;
+    [SerializeField]
+    AudioSource source;
     
     private void OnValidate()
     {
@@ -35,6 +39,7 @@ public class CutsceneManager : MonoBehaviour
     {
         instance = this;
             data = Resources.Load<CutsceneLoaderContainer>("CutsceneLoaderData");
+        source.Stop();
     }
 
     private void Update()
@@ -51,11 +56,15 @@ public class CutsceneManager : MonoBehaviour
         title.text = data.GetTitle();
         sceneToLoad = data.GetSceneToLoad();
         dialogueManager.SetAfinityAndDialogueData(data.GetCutsceneToLoadName(),data.GetAfinityToLoadName());
+        //clip = data.GetClip();
+        source.clip = data.GetClip();
 
     }
     public void OnBeginScene()
     {
         dialogueManager.StartDialogue();
+        source.Play();
+        source.loop = true;
     }
     IEnumerator StartScene()
     {
